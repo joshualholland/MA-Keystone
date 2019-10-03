@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm-run-all --parallel watch:*",
-    "start": "node server/index.js",
+    "start": "node keystone.js",
     "build": "npx webpack",
     "watch:build": "npx webpack -w",
-    "watch:server": "nodemon server/index.js"
+    "watch:server": "nodemon keystone.js"
   },
   "author": "Joshua Holland",
   "license": "ISC",
