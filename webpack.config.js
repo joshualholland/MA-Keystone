@@ -1,5 +1,10 @@
 var path = require('path');
 
+// TODO
+// Have to create production build that will bundle.min.css for performance
+// Use MiniCssExtractPlugin to do this
+// https://github.com/babel/babel/issues/7254_ Polyfill as entry point poss problem
+
 const clientConfig = {
     mode: 'development',
     entry: ['@babel/polyfill', './client/index.jsx'],
@@ -19,6 +24,10 @@ const clientConfig = {
         {
             test: /.css?$/,
             use: ['style-loader', 'css-loader']
+        },
+        {
+          test: /.scss?$/,
+          use: ['sass-loader']
         }
       ]
     },
