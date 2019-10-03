@@ -1,16 +1,14 @@
 var keystone = require('keystone');
 var Types = keystone.Field.Types;
-var path = require('path');
 
 // First we gonna create our User list
-var Regular_Services = new keystone.List('Regular_Services');
+var Services = new keystone.List('Services');
 
 // Then we gonna add the fields 
-Regular_Services.add({
-  text: { type: Types.Text, index: true },
-  Price: { type: Types.Money, index: true },
+Services.add({
+  text: { type: Types.Text, index: true }
 });
 
-Regular_Services.defaultColumns = 'name, price';
+Services.defaultColumns = 'name';
 
-Regular_Services.register();
+Services.register();

@@ -1,6 +1,5 @@
 var keystone = require('keystone');
 var Types = keystone.Field.Types;
-var path = require('path');
 
 // Creates list for team
 var Team = new keystone.List('Team');
@@ -10,13 +9,13 @@ var smallImgStorage = new keystone.Storage({
     adapter: keystone.Storage.Adapters.FS,
     fs: {
         // required; path where the files should be stored
-        path: keystone.expandPath('server/public/img/team/small'),
+        path: keystone.expandPath('public/img/team/small'),
         generateFilename: function (file, index) {
             return file.originalname;
         },
         whenExists: 'error',
         // path where files will be served
-        publicPath: '/public/img/team/small',
+        publicPath: 'public/img/team/small',
     },
 });
 
@@ -25,7 +24,7 @@ var largeImgStorage = new keystone.Storage({
     adapter: keystone.Storage.Adapters.FS,
     fs: {
         // required; path where the files should be stored
-        path: keystone.expandPath('server/public/img/team/large'),
+        path: keystone.expandPath('public/img/team/large'),
         generateFilename: function (file, index) {
             return file.originalname;
         },

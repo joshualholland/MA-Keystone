@@ -1,6 +1,5 @@
 var keystone = require('keystone');
 var Types = keystone.Field.Types;
-var path = require('path');
 
 // Creates list for stylists
 var Stylist = new keystone.List('Stylist');
@@ -10,7 +9,7 @@ var smallImgStorage = new keystone.Storage({
     adapter: keystone.Storage.Adapters.FS,
     fs: {
         // required; path where the files should be stored
-        path: keystone.expandPath('server/public/img/stylists/small'),
+        path: keystone.expandPath('public/img/stylists/small'),
         generateFilename: function (file, index) {
             return file.originalname;
         },
@@ -25,7 +24,7 @@ var largeImgStorage = new keystone.Storage({
     adapter: keystone.Storage.Adapters.FS,
     fs: {
         // required; path where the files should be stored
-        path: keystone.expandPath('server/public/img/stylists/large'),
+        path: keystone.expandPath('public/img/stylists/large'),
         generateFilename: function (file, index) {
             return file.originalname;
         },

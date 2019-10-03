@@ -4,24 +4,31 @@
   "description": "Keystone experiment for MA",
   "main": "index.js",
   "scripts": {
-    "dev": "npm-run-all",
-    "start": "node index.js",
-    "compile": "webpack --config webpack.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npm-run-all --parallel watch:*",
+    "start": "node server/index.js",
+    "build": "npx webpack",
+    "watch:build": "npx webpack -w",
+    "watch:server": "nodemon server/index.js"
   },
   "author": "Joshua Holland",
   "license": "ISC",
   "dependencies": {
     "keystone": "^4.2.1",
+    "nodemon": "^1.19.3",
+    "npm-run-all": "^4.1.5",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
+    "react-router-dom": "^5.1.2",
     "underscore": "^1.9.1"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/polyfill": "^7.4.3",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
     "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9"
   }
