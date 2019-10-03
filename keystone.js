@@ -6,7 +6,7 @@ keystone.init({
   // The name of the KeystoneJS application
   'name': 'morgan-ashley',
   // Paths to our application static files
-  'static': [ 'public' ],
+  'static': [ "public","client"],
   // Keystone includes an updates framework, 
   // which you can enable by setting the auto update option to true.
   // Updates provide an easy way to seed your database, 

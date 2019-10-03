@@ -1,10 +1,11 @@
 import React from 'react';
+import { hot } from "react-hot-loader";
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
 import Navbar from './Global/Navbar';
 import Home from './Home/Home';
 
-export default class App extends React.Component {
+class App extends React.Component {
     render() {
         return (
             <Router>
@@ -18,3 +19,5 @@ export default class App extends React.Component {
         )
     }
 }
+
+export default hot(module)(App);
