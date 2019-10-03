@@ -41,8 +41,8 @@ const clientConfig = {
     extensions: [".jsx", ".js", ".css"]
   },
   output: {
-    path: path.resolve(__dirname, "public"),
-    filename: "js/app.js",
+    path: path.resolve(__dirname, "public/js"),
+    filename: "app.js",
     publicPath: "/"
   },
   plugins: [new webpack.HotModuleReplacementPlugin()]
