@@ -1,17 +1,16 @@
-//import keystone
-var keystone = require('keystone');
+const keystone = require('keystone');
+// Get env from .env
+require('dotenv').config();
+
+// Next app
+const next = require('next');
+const dev = process.env.NODE_ENV !== 'production';
+const app = next({ dev });
 
 // Set up our keystone instance
 keystone.init({
   // The name of the KeystoneJS application
   'name': 'morgan-ashley',
-  // Paths to our application static files
-  'static': [ "public","client"],
-  // Keystone includes an updates framework, 
-  // which you can enable by setting the auto update option to true.
-  // Updates provide an easy way to seed your database, 
-  // transition data when your models change, 
-  // or run transformation scripts against your database.
   'auto update': true,
   // The url for your MongoDB connection
   'mongo': 'mongodb://localhost:27017/MA_Salon',
@@ -26,8 +25,10 @@ keystone.init({
 // Load your project's Models
 keystone.import('./models');
 
-// Add routes  
-keystone.set('routes', require('./routes'));
+app.prepare()
+  .then(() => {
+    keystone.set('routes', require('./routes')(app));
 
-// Start Keystone
-keystone.start();
+    keystone.start();
+});
+

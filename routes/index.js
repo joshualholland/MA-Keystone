@@ -1,27 +1,24 @@
-const path = require("path");
-const webpack = require("webpack");
-const webpackConfig = require("../webpack.config");
-const compiler = webpack(webpackConfig);
 const keystone = require("keystone");
 
+// Setup Route Bindings
+exports = module.exports = nextApp => keystoneApp => {
 
-// Export our app routes
-exports = module.exports = function(app) {
-  // app.all('/api*', keystone.middleware.cors);
-  // app.options('/api*', function(req, res) { res.send(200); });
+	// Next request handler
+	const handle = nextApp.getRequestHandler();
 
-  // HMR Setup !! DEV ONLY
-  app.use(
-    require("webpack-dev-middleware")(compiler, {
-      hot: true,
-      publicPath: webpackConfig[0].output.publicPath
-    })
-  );
-  app.use(require("webpack-hot-middleware")(compiler));
+	/*keystoneApp.get('/api/posts', (req, res, next) => {
+		const Post = keystone.list('Post');
+		Post.model
+			.find()
+			.where('state', 'published')
+			.sort('-publishedDate')
+			.exec(function (err, results) {
+				if (err) throw err;
+				res.json(results);
+			});
+	});*/
 
-  // Get request pointing to our api (test using postman)
-  app.get("/", function(req, res) {
-    // Render some simple boilerplate html
-    res.sendFile(path.join(__dirname, "../../public/index.html"));
-  });
-};
+	keystoneApp.get('*', (req, res) => {
+		return handle(req, res);
+	});
+}
