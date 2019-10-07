@@ -2,3 +2,4 @@ node_modules
 updates
 .vscode/
 .next/
+.env
