@@ -1,14 +1,16 @@
-// @import '/imported/animate.scss';
-// @import '/imported/bootstrap.scss';
-// @import '/imported/et-line.scss';
-// // @import './imported/font-awesome.scss';
-// @import '/imported/magnific-popup.scss';
-// @import '/imported/main.scss';
-// @import '/imported/misc.scss';
-// @import '/imported/owl.carousel.scss';
-// @import '/imported/style-responsive.scss';
-// @import '/imported/style.scss';
-// @import '/imported/vertical-rhythm.scss';
-.test{
-    color:red;
+@import './imported/bootstrap-scss/bootstrap.scss';
+
+@import './custom/carousel.scss';
+@import './custom/home.scss';
+
+body {
+  background-color: black !important;
+}
+
+.page {
+  overflow: hidden;
+}
+
+.relative {
+  position: relative;
 }

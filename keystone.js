@@ -11,6 +11,7 @@ const app = next({ dev });
 keystone.init({
   // The name of the KeystoneJS application
   'name': 'morgan-ashley',
+  'static':['public'],
   'auto update': true,
   // The url for your MongoDB connection
   'mongo': 'mongodb://localhost:27017/MA_Salon',

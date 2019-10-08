@@ -1,14 +1,30 @@
-import React from "react";
-import Navbar from '../client/components/Navbar';
-import "../client/scss/app.scss"
+import React, { useState, useEffect } from "react";
+import Navbar from "../client/components/Navbar";
+import ReactCarousel from "../client/components/ReactCarousel";
+import "../client/scss/app.scss";
 
-const image = require('../images/007.jpg')
+let window = require("global/window");
 
 const Home = () => {
+  const [height, setHeight] = useState(0);
+
+  useEffect(() => {
+    setHeight($(window).height());
+  }, []);
+
+  
+
   return (
     <>
-    <img src={image}></img>
-    <div className='test'>Hello</div>
+      <div className="page" id="top">
+        <div className="imageContainer bg-dark relative">
+          <ReactCarousel height={height} />
+        </div>
+        <div className="topContainer">
+          <div>Hello</div>
+        </div>
+      </div>
+      <h1>{height}</h1>
     </>
   );
 };
