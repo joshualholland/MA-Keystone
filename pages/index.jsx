@@ -8,23 +8,28 @@ let window = require("global/window");
 const Home = () => {
   const [height, setHeight] = useState(0);
 
+  // componentDidMount()
   useEffect(() => {
     setHeight($(window).height());
+    // window.addEventListener("resize", updateDimensions);
   }, []);
+
+  function updateDimensions(){
+    setHeight($(window).height());
+  }
 
   
 
   return (
     <>
       <div className="page" id="top">
+      <Navbar/>
         <div className="imageContainer bg-dark relative">
-          <ReactCarousel height={height} />
+          {/* <ReactCarousel height={height} /> */}
         </div>
-        <div className="topContainer">
-          <div>Hello</div>
-        </div>
+          
       </div>
-      <h1>{height}</h1>
+      {/* <h1>{height}</h1> */}
     </>
   );
 };

@@ -1,0 +1,70 @@
+.naviContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 100px;
+    background: gray;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+div.logo {
+    height: 1rem;
+    width: 1rem;
+    margin:auto;
+    margin-top:0.5rem;
+    background-color: cyan;
+    float: left;
+}
+
+nav.navi-nav {
+    float: right;
+}
+
+ul.navi-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+ul.navi-list>li {
+    list-style: none;
+}
+
+ul.navi-list>li>a {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+ul.navi-list>li>a:hover,
+ul.navi-list>li>a.active {
+    color: cyan;
+    background: black;
+}
+
+.menu-toggle {
+    color: white;
+    float: right;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width:1200px) {
+    .naviContainer {
+        padding: 0 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav.navi-nav{
+        display:none;
+    }
+}

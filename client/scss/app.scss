@@ -1,10 +1,11 @@
 @import './imported/bootstrap-scss/bootstrap.scss';
 
-@import './custom/carousel.scss';
-@import './custom/home.scss';
+@import './custom/home/carousel.scss';
+@import './custom/home/home.scss';
+@import './custom/layout/navbar.scss';
 
 body {
-  background-color: black !important;
+  // background-color: black !important;
 }
 
 .page {
