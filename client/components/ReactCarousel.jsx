@@ -17,7 +17,7 @@ export default function ReactCarousel(props) {
         items.push(
           <div key={index} className="carousel-item active">
             <img
-              className="d-block w-100 imageFit"
+              className="d-block w-100 imageFitCarousel"
               src={item.replace("./", "./images/carousel/")}
               style={{ height: `${props.height}px` }}
             />
@@ -27,7 +27,7 @@ export default function ReactCarousel(props) {
         items.push(
           <div key={index} className="carousel-item">
             <img
-              className="d-block w-100 imageFit"
+              className="d-block w-100 imageFitCarousel"
               src={item.replace("./", "./images/carousel/")}
               style={{ height: `${props.height}px` }}
             />
@@ -41,7 +41,7 @@ export default function ReactCarousel(props) {
   return (
     <div
       id="MAcarousel"
-      className="carousel slide carousel-fade imageFit"
+      className="carousel slide carousel-fade imageFitCarousel"
       data-ride="carousel"
       data-interval="3000"
     >

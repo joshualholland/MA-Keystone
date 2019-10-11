@@ -1,70 +1,334 @@
-.naviContainer {
-    position: absolute;
+$height:5rem;
+$logoHeight: $height*1.2;
+$mobileBarOpacity: 0.9;
+
+#naviContainer {
+    position: fixed;
     top: 0;
     left: 0;
-    padding: 0 100px;
-    background: gray;
+    padding: 0 1vw;
+    background: transparent;
     width: 100%;
     box-sizing: border-box;
+    z-index: 1000;
+    height: $height;
 }
 
-div.logo {
-    height: 1rem;
-    width: 1rem;
-    margin:auto;
-    margin-top:0.5rem;
-    background-color: cyan;
+.logoContainer {
+    position: absolute;
+    height: 100%;
+}
+
+#logo {
+    position: absolute;
+    top: 50%;
+    margin-top: -($logoHeight/2);
+    height: $logoHeight;
     float: left;
+    z-index: 1001;
+    background: transparent;
 }
 
-nav.navi-nav {
+#navi-nav {
     float: right;
+    // height: 100%;
 }
 
-ul.navi-list {
+.navi-list {
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-ul.navi-list>li {
+.navi-list>li {
     list-style: none;
 }
 
-ul.navi-list>li>a {
-    height: 50px;
-    line-height: 50px;
+.navi-list>li>a {
+    line-height: $height;
+    height: $height;
     padding: 0 20px;
-    color: white;
+    color: rgb(200, 199, 199);
     text-decoration: none;
     display: block;
+    font-size: $height*(0.2);
 }
 
-ul.navi-list>li>a:hover,
-ul.navi-list>li>a.active {
-    color: cyan;
-    background: black;
+.navi-list>li>a:hover,
+.navi-list>li>a.active {
+    color: white;
+    // transition: 0.5s;
 }
 
-.menu-toggle {
+#menu-toggle {
     color: white;
     float: right;
-    line-height: 50px;
+    line-height: $height;
     font-size: 24px;
     cursor: pointer;
     display: none;
 }
 
-@media (max-width:1200px) {
-    .naviContainer {
+.mn-soc-link {
+    width: 34px;
+    height: 34px;
+    line-height: 33px;
+    text-align: center;
+    font-size: 12px;
+    display: inline-block;
+    border: 1px solid rgb(136, 136, 136);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    -moz-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    -o-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    -ms-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+}
+
+$lg:1200px;
+a.navi-link.sm_icons {
+    @media(min-width:$lg) {
+        display: inline-block !important;
+        padding: 0 0.5rem;
+        width: 2rem;
+    }
+
+    @media(max-width:$lg) {
+        display: block;
+        border:0px;
+        border-bottom-width: 0.5px;
+        border-color: grey;
+        border-style: solid;
+    }
+}
+
+//MOBILE
+@media (max-width:$lg) {
+    #naviContainer {
         padding: 0 20px;
     }
 
-    .menu-toggle {
+    .navi-list>li>a:hover,
+    .navi-list>li>a.active {
+        background-color: black;
+    }
+
+    #menu-toggle {
         display: block;
     }
 
-    nav.navi-nav{
-        display:none;
+    #naviContainer #navi-nav {
+        position: absolute;
+        width: 100%;
+        // height:calc(100vw - 5rem);
+        top: $height;
+        left: 0;
+        // transition: 0.5s;
+    }
+
+    #naviContainer #navi-nav .navi-list {
+        display: block;
+    }
+
+    .navi-list>li {
+        border: 0;
+        border-bottom-width: 1px;
+        border-color: grey;
+        border-style: solid;
+        background-color: rgb(27, 27, 27);
+    }
+
+    #navi-nav {
+        display: none;
+        // background-color: black;
+        opacity: $mobileBarOpacity;
+        // transition: 0.7s;
     }
 }
+
+
+
+// *** ANIMATIONS ***
+.animated {
+    $duration: 1s;
+    -webkit-animation-duration: $duration;
+    animation-duration: $duration;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+    -webkit-animation-timing-function: ease;
+    visibility: visible !important;
+}
+
+.navBarMaximize {
+    animation-name: navBarMaximize;
+    -webkit-animation-name: navBarMaximize;
+}
+
+.navBarMinimize {
+    animation-name: navBarMinimize;
+    -webkit-animation-name: navBarMinimize;
+}
+
+.logoMinimize {
+    animation-name: logoMinimize;
+    -webkit-animation-name: logoMinimize;
+}
+
+.logoMaximize {
+    animation-name: logoMaximize;
+    -webkit-animation-name: logoMaximize;
+}
+
+.colorChange {
+    animation-name: colorChange;
+}
+
+.colorTransparent {
+    animation-name: colorTransparent;
+}
+
+.mobilePullUp {
+    animation-name: mobilePullUp;
+}
+
+.mobilePullDown {
+    animation-name: mobilePullDown;
+}
+
+.mobileDisplayDropDown {
+    animation-name: mobileDisplayDropDown
+}
+
+.mobileHideDropDown {
+    animation-name: mobileHideDropDown
+}
+
+$navBarMaxHeight : $height;
+$navBarMinimalHeight : $height - 2;
+
+
+@keyframes colorChange {
+    0% {
+        background: transparent;
+        height: $navBarMaxHeight;
+    }
+
+    100% {
+        background: black;
+        opacity: $mobileBarOpacity;
+        height: $navBarMinimalHeight;
+    }
+}
+
+@keyframes colorTransparent {
+    0% {
+        background: black;
+        opacity: $mobileBarOpacity;
+        height: $navBarMinimalHeight;
+    }
+
+    100% {
+        background: transparent;
+        height: $navBarMaxHeight;
+
+    }
+}
+
+
+@keyframes mobilePullUp {
+    0% {
+        top: $navBarMaxHeight
+    }
+
+    100% {
+        top: $navBarMinimalHeight
+    }
+}
+
+@keyframes mobilePullDown {
+    0% {
+        top: $navBarMinimalHeight
+    }
+
+    100% {
+        top: $navBarMaxHeight
+    }
+}
+
+@keyframes mobileDisplayDropDown {
+    0% {
+        height: 0px
+    }
+
+    100% {
+        height: 100px;
+    }
+}
+
+@keyframes mobileHideDropDown {
+    0% {
+        height: 100px;
+    }
+
+    100% {
+        height: 0px
+    }
+}
+
+
+@keyframes navBarMinimize {
+    0% {
+        height: $navBarMaxHeight;
+        line-height: $navBarMaxHeight;
+    }
+
+    100% {
+        height: $navBarMinimalHeight;
+        line-height: $navBarMinimalHeight;
+    }
+}
+
+@keyframes navBarMaximize {
+    0% {
+        height: $navBarMinimalHeight;
+        line-height: $navBarMinimalHeight;
+    }
+
+    100% {
+        height: $navBarMaxHeight;
+        line-height: $navBarMaxHeight;
+
+    }
+}
+
+$logoMaxHeight: $logoHeight;
+$logoMinimalHeight: $logoHeight - 2;
+
+@keyframes logoMinimize {
+    0% {
+        margin-top: -($logoMaxHeight/2);
+        height: $logoMaxHeight;
+    }
+
+    100% {
+        margin-top: -($logoMinimalHeight/2);
+        height: $logoMinimalHeight;
+    }
+}
+
+@keyframes logoMaximize {
+    0% {
+        margin-top: -($logoMinimalHeight/2);
+        height: $logoMinimalHeight;
+    }
+
+    100% {
+        margin-top: -($logoMaxHeight/2);
+        height: $logoMaxHeight;
+    }
+}
+
+// @-webkit-keyframes DUPLICATE
