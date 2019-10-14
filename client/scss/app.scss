@@ -1,11 +1,23 @@
-@import './imported/bootstrap-scss/bootstrap.scss';
+@import './mixins.scss';
 
-@import './custom/home/carousel.scss';
+@import './imported/bootstrap-scss/bootstrap.scss';
+@import './imported/fonts.scss';
+
+@import './custom/home/bannerCarousel.scss';
+@import './custom/home/reviewsCarousel.scss';
 @import './custom/home/home.scss';
 @import './custom/layout/navbar.scss';
 
 body {
-  // background-color: black !important;
+  color: #111;
+  font-size: 14px;
+  font-family: "Open Sans", arial, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-alt {
+  @include font-alt;
 }
 
 .page {
@@ -16,6 +28,7 @@ body {
   position: relative;
 }
 
-.imageFit{
-  height:100%;
+.imageFit {
+  height: 100%;
+  object-fit: contain;
 }

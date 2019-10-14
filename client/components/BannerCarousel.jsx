@@ -7,7 +7,7 @@ const r = require.context(
   /\.(png|jpe?g|svg)$/
 );
 
-export default function ReactCarousel(props) {
+export default function BannerCarousel(props) {
   
 
   function createItems(r) {

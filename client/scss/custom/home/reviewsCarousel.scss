@@ -1,0 +1,40 @@
+@import '../../mixins.scss';
+
+.reviewsContainer{
+    background-image:url("/images/landing/rev1.jpg");
+    background-attachment: fixed;
+    background-position:60% 10%;
+    background-size:100% 130%;
+}
+
+.rcItem{
+    padding:10rem 30rem;
+    text-align:center;
+    font-size:3rem;
+}
+
+#reviewsCarousel{
+    background-color:black;
+    opacity:0.65;
+}
+
+.wpsHeader{
+    color:white;
+    font-size:1rem;
+    margin-bottom:1.4rem;
+    @include font-alt;
+}
+
+.wpsContent{
+    color:white;
+    font-size:1rem;
+}
+
+.wpsAuthor{
+    color:#777;
+    font-size:0.6rem;
+}
+
+.icon-quote{
+    
+}
