@@ -8,27 +8,82 @@
     color: white;
 }
 
-.headerContent{
-    margin-top:15%;
-    margin-bottom:7%;
-    color:black;
-    font-size:1.5rem;
+.craftIcons{
+    object-fit: contain;
+    margin-top:1.5rem;
+    height:2.5rem;
+}
+#tallPhoto {
+    max-height: 800px;
+    @include media-breakpoint-up(xl){
+        max-height:500px;
+    }
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.headerContent {
+    color: black;
+    font-size: 1.5rem;
     @include font-alt;
+
+    @include media-breakpoint-up(xs) {
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 1rem;
+    }
+
+    @include media-breakpoint-up(xl) {}
 }
 
 .descContent {
-    padding-top:5rem;
-    font-size:0.9rem;
-    color:rgb(95,95,95);
-    font-weight:100;
-    line-height:1.5rem;
-    padding:0; //clear
-    $xPadding:5rem;
-    padding-left:$xPadding;
-    padding-right:$xPadding;
+    font-size: 0.9rem;
+    color: rgb(95, 95, 95);
+    font-weight: 100;
+    line-height: 1.5rem;
+    padding: 0; //clear
+    $xPadding: 5rem;
+    padding-left: $xPadding;
+    padding-right: $xPadding;
+
+    @include media-breakpoint-up(xs) {
+        margin-bottom: 2rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 2.5rem;
+    }
+
+    @include media-breakpoint-up(xl) {}
 }
 
-.row.limit [class*="col-"]{
-    max-height:30rem;
-    overflow:hidden;
+.row.limit [class*="col-"] {
+    max-height: 30rem;
+    overflow: hidden;
+}
+
+.followContainer {
+    $xMargin: 2rem;
+    margin: auto;
+    margin-top: $xMargin;
+    margin-bottom: $xMargin;
+    width: 40rem;
+    text-align: center;
+    border: 1px rgb(153, 153, 153) dashed;
+    letter-spacing: 1.2rem;
+}
+
+.followText {
+    font-weight: 300;
+    color: rgb(119, 119, 119);
+    padding-top: 1rem;
+}
+
+#mamaDark {
+    display: block;
+    width: 10rem;
+    margin: auto;
 }

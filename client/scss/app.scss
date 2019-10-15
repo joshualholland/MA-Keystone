@@ -3,6 +3,7 @@
 @import './imported/bootstrap-scss/bootstrap.scss';
 @import './imported/fonts.scss';
 
+@import './custom/layout/footer.scss';
 @import './custom/home/bannerCarousel.scss';
 @import './custom/home/reviewsCarousel.scss';
 @import './custom/home/home.scss';
@@ -31,4 +32,7 @@ body {
 .imageFit {
   height: 100%;
   object-fit: contain;
+}
+.bg-scroll{
+	background-attachment: scroll !important;
 }

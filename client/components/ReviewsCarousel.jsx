@@ -1,14 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 export default function ReviewsCarousel() {
+  //componentDidMount()
+  // useEffect(() => {
+  //   $("#reviewsCarousel").carousel("pause");
+  // }, []);
+
   return (
     <div
       id="reviewsCarousel"
-      className="carousel slide "
-      data-ride="carousel"
+      className="carousel slide row no-gutters"
+      // data-ride="carousel"
       data-interval="3000"
     >
-      <div className="carousel-inner">
+      <ol className="carousel-indicators">
+        <li
+          data-target="#reviewsCarousel" data-slide-to="0"
+          className="active"
+        ></li>
+        <li data-target="#reviewsCarousel" data-slide-to="1"></li>
+        <li data-target="#reviewsCarousel" data-slide-to="2"></li>
+      </ol>
+      <div className="carousel-inner" id="reviewCarouselInner">
         <div className="carousel-item rcItem active">
           <div className="icon-quote">
             <img height="32" width="32" src="/images/landing/quotesIcon.png" />

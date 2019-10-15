@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../client/components/Navbar";
 import BannerCarousel from "../client/components/BannerCarousel";
 import ReviewsCarousel from "../client/components/ReviewsCarousel";
+import Footer from "../client/components/Footer";
 import "../client/scss/app.scss";
 import window from "global/window";
 import $ from "jquery";
+import {Link, animateScroll as scroll} from 'react-scroll';
 
 const Home = () => {
   const [height, setHeight] = useState(0);
@@ -21,18 +23,18 @@ const Home = () => {
 
   return (
     <>
-      <div className="page" id="top">
+      <div className="page bg-scroll" id="top">
         <Navbar />
         <div className="imageContainer bg-dark relative">
           <BannerCarousel height={height} />
         </div>
       </div>
-      <section className="row overflow-hidden no-gutters">
+      <section className="row overflow-hidden no-gutters bg-scroll">
         <div className="col-12 col-xl-6">
           <img className="w-100" src="/images/landing/landing1.jpg"></img>
         </div>
         <div className="col-12 col-xl-6 contentContainer text-center">
-          <span className='icon-quote'></span>
+          <span className="icon-quote"></span>
           <h3 className="headerContent">CULTURE</h3>
           <p className="descContent">
             We are passionate about creating a culture at Morgan Ashley that is
@@ -42,12 +44,15 @@ const Home = () => {
           </p>
         </div>
       </section>
-      <section
-        className="row overflow-hidden no-gutters"
-        style={{ "maxHeight": "40rem" }}
-      >
-        <div className="col-12 col-xl-6 contentContainer text-center">
-          <h3 className="headerContent">CRAFT</h3>
+      <section className="row overflow-hidden no-gutters bg-scroll">
+        <div className="col-12 col-xl-6 order-1 order-xl-0 contentContainer text-center">
+          <div className='row'>
+            <img className='offset-2 col-2 craftIcons' 
+            src='/images/landing/icon-1.png'></img>
+            <h3 className="col-4 headerContent">CRAFT</h3>
+            <img className='col-2 craftIcons' 
+            src='/images/landing/icon-2.png'></img>
+          </div>
           <p className="descContent">
             The craft of hairdressing for us at Morgan Ashley is to produce the
             most precise and personalized look for each client. We believe in
@@ -59,10 +64,14 @@ const Home = () => {
           </p>
         </div>
         <div className="col-12 col-xl-6">
-          <img className="w-100" src="/images/landing/landing2.jpg"></img>
+          <img
+            id="tallPhoto"
+            className="w-100 order-0"
+            src="/images/landing/landing2.jpg"
+          ></img>
         </div>
       </section>
-      <section className="row overflow-hidden no-gutters ">
+      <section className="row overflow-hidden no-gutters bg-scroll ">
         <div className="col-12 col-xl-6">
           <img className="w-100" src="/images/landing/landing3.jpg"></img>
         </div>
@@ -77,9 +86,17 @@ const Home = () => {
           </p>
         </div>
       </section>
-      <section className='reviewsContainer'>
-        <ReviewsCarousel/>
+      <section className="row no-gutters reviewsContainer bg-scroll">
+        <ReviewsCarousel />
       </section>
+      <section className="row no-gutters followContainer bg-scroll">
+        <div className="col-12">
+          <p className="followText">Follow</p>
+          <img id="mamaDark" src="/images/landing/mamarque_dark.svg"></img>
+          <p className="followText">On Instagram</p>
+        </div>
+      </section>
+      <Footer />
     </>
   );
 };
