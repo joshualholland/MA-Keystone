@@ -1,4 +1,4 @@
-@import '../../mixins.scss';
+@import "../../mixins.scss";
 
 // This will reposition the image to fit for different windows
 @mixin bannerResponsive(
@@ -50,6 +50,66 @@
   display: table-cell;
   vertical-align: middle;
 }
-.productHeader{
-    @include font-alt;
+.servicesContainer{
+  width:80%;
+}
+.productHeader {
+  @include font-alt;
+}
+.productTable {
+  width:90%;
+  margin:auto;
+  color:#adabab;
+  font-weight:300;
+  @include media-breakpoint-up(lg){
+    width:70%;
+  }
+}
+.productRow {
+  border-top:1px solid gray;
+}
+.productName {
+  text-align: left;
+}
+.productPrice {
+  text-align:right;
+}
+
+.productsImageContainer{
+  width:100vw;
+  height:10rem;
+  margin:0;
+  padding:0;
+  background-color:black;
+  background-size:cover;
+  background-image:url('/images/services/products.jpg');
+  background-attachment: fixed;
+}
+
+.productsImageHeader{
+  text-align: center;
+  @include font-alt;
+  color:white;
+  font-weight:300;
+  font-size:1rem;
+  letter-spacing: 300;
+}
+
+.productsImage{
+  position:relative;
+  width:100%;
+  object-fit:contain;
+  opacity:0.5;
+}
+
+
+.bookButton{
+  display:block;
+  margin:auto;
+  width:15rem;
+  background-color:rgba(255,255,255,0.8);
+  font-size:0.7rem;
+  border-radius:3px;
+  font-weight:400;
+  letter-spacing:0.2rem;
 }

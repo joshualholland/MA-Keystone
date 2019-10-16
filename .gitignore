@@ -3,3 +3,4 @@ updates
 .vscode/
 .next/
 .env
+.prettierignore
