@@ -3,11 +3,13 @@
 @import './imported/bootstrap-scss/bootstrap.scss';
 @import './imported/fonts.scss';
 
+@import './custom/layout/navbar.scss';
+@import './custom/layout/banner.scss';
 @import './custom/layout/footer.scss';
 @import './custom/home/bannerCarousel.scss';
 @import './custom/home/reviewsCarousel.scss';
 @import './custom/home/home.scss';
-@import './custom/layout/navbar.scss';
+@import './custom/services/services.scss';
 
 body {
   color: #111;

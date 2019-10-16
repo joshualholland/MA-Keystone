@@ -60,7 +60,7 @@ $mobileBarOpacity: 0.9;
     // transition: 0.5s;
 }
 
-#menu-toggle {
+#menu-toggle {  
     color: white;
     float: right;
     line-height: $height;
@@ -148,10 +148,8 @@ a.navi-link.sm_icons {
     }
 }
 
-
-
-// *** ANIMATIONS ***
-.animated {
+// ANIMATIONS *********************
+.animated { 
     $duration: 1s;
     -webkit-animation-duration: $duration;
     animation-duration: $duration;
@@ -162,173 +160,189 @@ a.navi-link.sm_icons {
     visibility: visible !important;
 }
 
-.navBarMaximize {
-    animation-name: navBarMaximize;
-    -webkit-animation-name: navBarMaximize;
-}
+.navBarMaximize {animation-name: navBarMaximize;
+    -webkit-animation-name: navBarMaximize;}
+.navBarMinimize {animation-name: navBarMinimize;
+    -webkit-animation-name: navBarMinimize;}
 
-.navBarMinimize {
-    animation-name: navBarMinimize;
-    -webkit-animation-name: navBarMinimize;
-}
+.logoMinimize {animation-name: logoMinimize;
+    -webkit-animation-name: logoMinimize;}
+.logoMaximize {animation-name: logoMaximize;
+    -webkit-animation-name: logoMaximize;}
 
-.logoMinimize {
-    animation-name: logoMinimize;
-    -webkit-animation-name: logoMinimize;
-}
+.colorChange {animation-name: colorChange;}
+.colorTransparent {animation-name: colorTransparent;}
 
-.logoMaximize {
-    animation-name: logoMaximize;
-    -webkit-animation-name: logoMaximize;
-}
+.mobilePullUp {animation-name: mobilePullUp;}
+.mobilePullDown {animation-name: mobilePullDown;}
 
-.colorChange {
-    animation-name: colorChange;
-}
+.mobileDisplayDropDown {animation-name: mobileDisplayDropDown;}
+.mobileHideDropDown {animation-name: mobileHideDropDown}
 
-.colorTransparent {
-    animation-name: colorTransparent;
-}
-
-.mobilePullUp {
-    animation-name: mobilePullUp;
-}
-
-.mobilePullDown {
-    animation-name: mobilePullDown;
-}
-
-.mobileDisplayDropDown {
-    animation-name: mobileDisplayDropDown
-}
-
-.mobileHideDropDown {
-    animation-name: mobileHideDropDown
-}
-
-$navBarMaxHeight : $height;
-$navBarMinimalHeight : $height - 2;
+// $navBarMaxHeight : $height;
+// $navBarMinimalHeight : $height - 2;
 
 
-@keyframes colorChange {
-    0% {
+// @keyframes colorChange {
+//     0% {background: transparent;
+//         height: $navBarMaxHeight;}
+//     100% {background: black;
+//         opacity: $mobileBarOpacity;
+//         height: $navBarMinimalHeight;}}
+
+// @keyframes colorTransparent {
+//     0% {background: black;
+//         opacity: $mobileBarOpacity;
+//         height: $navBarMinimalHeight;}
+//     100% {background: transparent;
+//         height: $navBarMaxHeight;}}
+
+
+// @keyframes mobilePullUp {
+//     0% {top: $navBarMaxHeight;}
+//     100% {top: $navBarMinimalHeight;}}
+
+// @keyframes mobilePullDown {
+//     0% {top: $navBarMinimalHeight;}
+//     100% {top: $navBarMaxHeight;}}
+
+// @keyframes mobileDisplayDropDown {
+//     0% {height: 0px;}
+//     100% {height: 100px;}}
+
+// @keyframes mobileHideDropDown {
+//     0% {height: 100px;}
+//     100% {height: 0px;}}
+
+
+// @keyframes navBarMinimize {
+//     0% {height: $navBarMaxHeight;
+//         line-height: $navBarMaxHeight;}
+//     100% {height: $navBarMinimalHeight;
+//         line-height: $navBarMinimalHeight;}}
+
+// @keyframes navBarMaximize {
+//     0% {height: $navBarMinimalHeight;
+//         line-height: $navBarMinimalHeight;}
+//     100% {height: $navBarMaxHeight;
+//         line-height: $navBarMaxHeight;}}
+
+@mixin navbarResponsive($logoHeight, $height:$height) {
+    $logoMaxHeight: $logoHeight;
+    $logoMinimalHeight: $logoHeight - 1;
+    $navBarMaxHeight : $height;
+    $navBarMinimalHeight : $height - 1;
+
+    #naviContainer { 
+        height:$height
+    }
+
+    .navi-list>li>a {
+        line-height: $height;
+        height: $height;
+    }
+    #menu-toggle {  
+        line-height: $height; 
+    }
+
+    #naviContainer #navi-nav {
+        top: $height;
+    }
+
+    @keyframes colorChange {
+        0% {background: transparent;
+            height: $navBarMaxHeight;}
+        100% {background: black;
+            opacity: $mobileBarOpacity;
+            height: $navBarMinimalHeight;}}
+
+    @keyframes colorTransparent {
+        0% {background: black;
+            opacity: $mobileBarOpacity;
+            height: $navBarMinimalHeight;}
+        100% {background: transparent;
+            height: $navBarMaxHeight;}}
+    
+    
+    @keyframes mobilePullUp {
+        0% {top: $navBarMaxHeight;}
+        100% {top: $navBarMinimalHeight;}}
+    
+    @keyframes mobilePullDown {
+        0% {top: $navBarMinimalHeight;}
+        100% {top: $navBarMaxHeight;}}
+    
+    @keyframes mobileDisplayDropDown {
+        0% {height: 0px;}
+        100% {height: 100px;}}
+    
+    @keyframes mobileHideDropDown {
+        0% {height: 100px;}
+        100% {height: 0px;}}
+    
+    
+    @keyframes navBarMinimize {
+        0% {height: $navBarMaxHeight;
+            line-height: $navBarMaxHeight;}
+        100% {height: $navBarMinimalHeight;
+            line-height: $navBarMinimalHeight;}}
+    
+    @keyframes navBarMaximize {
+        0% {height: $navBarMinimalHeight;
+            line-height: $navBarMinimalHeight;}
+        100% {height: $navBarMaxHeight;
+            line-height: $navBarMaxHeight;}}
+
+    @keyframes logoMinimize {
+        0% {
+            margin-top: -($logoMaxHeight/2);
+            height: $logoMaxHeight;
+        }
+
+        100% {
+            margin-top: -($logoMinimalHeight/2);
+            height: $logoMinimalHeight;
+        }
+    }
+
+    @keyframes logoMaximize {
+        0% {
+            margin-top: -($logoMinimalHeight/2);
+            height: $logoMinimalHeight;
+        }
+
+        100% {
+            margin-top: -($logoMaxHeight/2);
+            height: $logoMaxHeight;
+        }
+    }
+
+    #logo {
+        position: absolute;
+        top: 50%;
+        margin-top: -($logoHeight/2);
+        height: $logoHeight;
+        float: left;
+        z-index: 1001;
         background: transparent;
-        height: $navBarMaxHeight;
-    }
-
-    100% {
-        background: black;
-        opacity: $mobileBarOpacity;
-        height: $navBarMinimalHeight;
     }
 }
 
-@keyframes colorTransparent {
-    0% {
-        background: black;
-        opacity: $mobileBarOpacity;
-        height: $navBarMinimalHeight;
-    }
+@include navbarResponsive($logoHeight*0.5,3rem);
 
-    100% {
-        background: transparent;
-        height: $navBarMaxHeight;
+@include media-breakpoint-up(sm) {
+    @include navbarResponsive($logoHeight*0.6,3rem);
+}
+@include media-breakpoint-up(md) {
+    @include navbarResponsive($logoHeight*0.8);
+}
 
-    }
+@include media-breakpoint-up(lg) {
+    @include navbarResponsive($logoHeight*0.9);
+}
+
+@include media-breakpoint-up(xl) {
+    @include navbarResponsive($logoHeight);
 }
 
 
-@keyframes mobilePullUp {
-    0% {
-        top: $navBarMaxHeight
-    }
-
-    100% {
-        top: $navBarMinimalHeight
-    }
-}
-
-@keyframes mobilePullDown {
-    0% {
-        top: $navBarMinimalHeight
-    }
-
-    100% {
-        top: $navBarMaxHeight
-    }
-}
-
-@keyframes mobileDisplayDropDown {
-    0% {
-        height: 0px
-    }
-
-    100% {
-        height: 100px;
-    }
-}
-
-@keyframes mobileHideDropDown {
-    0% {
-        height: 100px;
-    }
-
-    100% {
-        height: 0px
-    }
-}
-
-
-@keyframes navBarMinimize {
-    0% {
-        height: $navBarMaxHeight;
-        line-height: $navBarMaxHeight;
-    }
-
-    100% {
-        height: $navBarMinimalHeight;
-        line-height: $navBarMinimalHeight;
-    }
-}
-
-@keyframes navBarMaximize {
-    0% {
-        height: $navBarMinimalHeight;
-        line-height: $navBarMinimalHeight;
-    }
-
-    100% {
-        height: $navBarMaxHeight;
-        line-height: $navBarMaxHeight;
-
-    }
-}
-
-$logoMaxHeight: $logoHeight;
-$logoMinimalHeight: $logoHeight - 2;
-
-@keyframes logoMinimize {
-    0% {
-        margin-top: -($logoMaxHeight/2);
-        height: $logoMaxHeight;
-    }
-
-    100% {
-        margin-top: -($logoMinimalHeight/2);
-        height: $logoMinimalHeight;
-    }
-}
-
-@keyframes logoMaximize {
-    0% {
-        margin-top: -($logoMinimalHeight/2);
-        height: $logoMinimalHeight;
-    }
-
-    100% {
-        margin-top: -($logoMaxHeight/2);
-        height: $logoMaxHeight;
-    }
-}
-
-// @-webkit-keyframes DUPLICATE

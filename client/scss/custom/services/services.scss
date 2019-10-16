@@ -1,0 +1,55 @@
+@import '../../mixins.scss';
+
+// This will reposition the image to fit for different windows
+@mixin bannerResponsive(
+  $background-position,
+  $height,
+  $background-size: "cover"
+) {
+  background-position: $background-position;
+  height: $height;
+  background-size: $background-size;
+}
+
+#services {
+  @include media-breakpoint-up(xs) {
+    @include bannerResponsive(38% -4rem, 7.5rem, cover);
+  }
+  @include media-breakpoint-up(sm) {
+    @include bannerResponsive(38% -10rem, 9rem, cover);
+  }
+  @include media-breakpoint-up(md) {
+    @include bannerResponsive(38% -12rem, 11.5rem, cover);
+  }
+  @include media-breakpoint-up(lg) {
+    @include bannerResponsive(38% -10.5rem, 15rem, cover);
+  }
+  @include media-breakpoint-up(xl) {
+    @include bannerResponsive(38% -10.5rem, 17rem, cover);
+  }
+
+  @media (min-width: "1350px") {
+    @include bannerResponsive(38% -12rem, 20rem, cover);
+  }
+  @media (min-width: "1450px") {
+    @include bannerResponsive(38% -13rem, 20rem, cover);
+  }
+  @media (min-width: "1600px") {
+    @include bannerResponsive(38% -18rem, 20rem, cover);
+  }
+  @media (min-width: "1750px") {
+    @include bannerResponsive(38% -21rem, 20rem, cover);
+  }
+}
+
+#servicesContentContainer {
+  display: table;
+  height: 100%;
+}
+#servicesContent {
+  display: table-cell;
+  vertical-align: middle;
+}
+.productHeader{
+    @include font-alt;
+}

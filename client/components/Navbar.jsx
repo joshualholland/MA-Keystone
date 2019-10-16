@@ -68,17 +68,17 @@ const Navbar = () => {
         <nav id="navi-nav">
           <ul className="navi-list">
             <li>
-              <a href="#" className="navi-link animated active">
+              <a href="/" className="navi-link animated active">
                 HOME
               </a>
             </li>
             <li>
-              <a className="navi-link animated heightAnimate" href="#">
+              <a className="navi-link animated heightAnimate" href="/us">
                 US
               </a>
             </li>
             <li>
-              <a className="navi-link animated heightAnimate" href="#">
+              <a className="navi-link animated heightAnimate" href="/services">
                 SERVICES
               </a>
             </li>

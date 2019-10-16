@@ -4,9 +4,6 @@ import BannerCarousel from "../client/components/BannerCarousel";
 import ReviewsCarousel from "../client/components/ReviewsCarousel";
 import Footer from "../client/components/Footer";
 import "../client/scss/app.scss";
-import window from "global/window";
-import $ from "jquery";
-import {Link, animateScroll as scroll} from 'react-scroll';
 
 const Home = () => {
   const [height, setHeight] = useState(0);
@@ -23,13 +20,13 @@ const Home = () => {
 
   return (
     <>
-      <div className="page bg-scroll" id="top">
+      <div className="page" id="top">
         <Navbar />
         <div className="imageContainer bg-dark relative">
           <BannerCarousel height={height} />
         </div>
       </div>
-      <section className="row overflow-hidden no-gutters bg-scroll">
+      <section className="row overflow-hidden no-gutters">
         <div className="col-12 col-xl-6">
           <img className="w-100" src="/images/landing/landing1.jpg"></img>
         </div>
@@ -44,7 +41,7 @@ const Home = () => {
           </p>
         </div>
       </section>
-      <section className="row overflow-hidden no-gutters bg-scroll">
+      <section className="row overflow-hidden no-gutters">
         <div className="col-12 col-xl-6 order-1 order-xl-0 contentContainer text-center">
           <div className='row'>
             <img className='offset-2 col-2 craftIcons' 
@@ -71,7 +68,7 @@ const Home = () => {
           ></img>
         </div>
       </section>
-      <section className="row overflow-hidden no-gutters bg-scroll ">
+      <section className="row overflow-hidden no-gutters">
         <div className="col-12 col-xl-6">
           <img className="w-100" src="/images/landing/landing3.jpg"></img>
         </div>
@@ -86,10 +83,10 @@ const Home = () => {
           </p>
         </div>
       </section>
-      <section className="row no-gutters reviewsContainer bg-scroll">
+      <section className="row no-gutters reviewsContainer">
         <ReviewsCarousel />
       </section>
-      <section className="row no-gutters followContainer bg-scroll">
+      <section className="row no-gutters followContainer">
         <div className="col-12">
           <p className="followText">Follow</p>
           <img id="mamaDark" src="/images/landing/mamarque_dark.svg"></img>
