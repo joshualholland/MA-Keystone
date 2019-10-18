@@ -83,7 +83,7 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a className="navi-link animated heightAnimate" href="#">
+              <a className="navi-link animated heightAnimate" href="/contact">
                 CONTACT
               </a>
             </li>
@@ -93,7 +93,8 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a className="navi-link animated heightAnimate" href="#">
+              <a className="navi-link animated heightAnimate" href="tel:205-995-2480">
+                <i className='fa fa-phone mr-2'/>
                 205-995-2480
               </a>
             </li>
@@ -110,7 +111,10 @@ const Navbar = () => {
                   <i className="fa fa-facebook"></i>
                 </span>
               </a>
-              <a className="navi-link animated sm_icons" href="#">
+              <a
+                className="navi-link animated sm_icons"
+                href="https://www.instagram.com/morganashleysalon/"
+              >
                 <span className="mn-soc-link tooltip-bot" title="Instagram">
                   <i className="fa fa-instagram"></i>
                 </span>

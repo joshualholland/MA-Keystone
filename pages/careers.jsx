@@ -18,48 +18,58 @@ export default function Careers() {
         <h5 className="careersHeader mx-0 mb-5">
           Interested in joining our team? Tell us a little bit about yourself
         </h5>
-        <div className="row">
-          <div className="col-12 col-lg-6">
-            <div className="form-group">
-              <input
-                type="name"
-                className="form-control"
-                id="nameForm"
-                placeholder="Name"
-              />
-              <input
-                type="email"
-                className="form-control"
-                id="emailForm"
-                placeholder="Email"
-              />
-              <input
-                type="name"
-                className="form-control"
-                id="positionForm"
-                placeholder="Desired Position"
-              />
+        <form>
+          <div className="form-group">
+            <div className="row">
+              <div className="col-12 col-lg-6">
+                <input
+                  type="name"
+                  className="form-control"
+                  id="nameForm"
+                  placeholder="Name"
+                  required
+                />
+                <input
+                  type="email"
+                  className="form-control"
+                  id="emailForm"
+                  placeholder="Email"
+                  required
+                />
+                <input
+                  type="name"
+                  className="form-control"
+                  id="positionForm"
+                  placeholder="Desired Position"
+                  required
+                />
+              </div>
+              <div className="col-12 col-lg-6" id="messageContainer">
+                <textarea
+                  type="name"
+                  className="form-control"
+                  id="messageForm"
+                  placeholder="Message"
+                  required
+                />
+              </div>
+            </div>
+            <div className="row justify-content-between">
+              <div className="col-3 allFieldsRequired">
+                <i className="fa fa-info-circle"> All fields are required</i>
+              </div>
+              <div className="col-3" id="submitContainer">
+                <input
+                  type="submit"
+                  className="btn maSubmit"
+                  value="SUBMIT"
+                ></input>
+              </div>
             </div>
           </div>
-          <div className="col-12 col-lg-6" id='messageContainer'>
-            <textarea
-              type="name"
-              className="form-control"
-              id="messageForm"
-              placeholder="Message"
-            />
-          </div>
-        </div>
-        <div className="row justify-content-between">
-            <div className='col-3 allFieldsRequired'>
-                <i className='fa fa-info-circle' > All fields are required</i>
-            </div>
-          <div className="col-3" id='submitContainer'>
-            <input type="submit" className="btn maSubmit" value="SUBMIT"></input>
-          </div>
-        </div>
+        </form>
       </div>
-      <GoogleJSMap/>
+      <GoogleJSMap />
       <Footer />
     </>
   );
