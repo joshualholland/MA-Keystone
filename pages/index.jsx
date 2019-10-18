@@ -24,6 +24,7 @@ const Home = () => {
         <Navbar />
         <div className="imageContainer bg-dark relative">
           <BannerCarousel height={height} />
+          <img className='malogo' src='/images/landing/malogo.svg'/>
         </div>
       </div>
       <section className="row overflow-hidden no-gutters">

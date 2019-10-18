@@ -8,8 +8,9 @@ import {
 var keyRing = require("../../keys.json");
 import '../scss/custom/layout/maps.scss';
 
-export default function GoogleJSMap() {
-  const apiKey = keyRing.Google.apiKey;
+const GoogleJSMap = React.memo(() =>{
+  // const apiKey = keyRing.Google.apiKey;
+  const apiKey= '' // KEEP LIKE THIS UNTIL YOU PUT LIVE TO PREVENT TOO MANY REQUESTS
 
   function Map() {
     return (
@@ -43,4 +44,6 @@ export default function GoogleJSMap() {
       </div>
     </>
   );
-}
+})
+
+export default GoogleJSMap;

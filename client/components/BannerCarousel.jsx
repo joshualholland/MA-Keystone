@@ -46,7 +46,7 @@ export default function BannerCarousel(props) {
       data-interval="3000"
     >
       <div className="carousel-inner">{createItems(r)}</div>
-      <a
+      {/* <a
         className="carousel-control-prev"
         href="#MAcarousel"
         role="button"
@@ -63,7 +63,7 @@ export default function BannerCarousel(props) {
       >
         <span className="carousel-control-next-icon" aria-hidden="true"></span>
         <span className="sr-only">Next</span>
-      </a>
+      </a> */}
     </div>
   );
 }
