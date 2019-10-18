@@ -3,3 +3,9 @@
     text-transform: uppercase;
     letter-spacing: 0.2em;
 }
+
+@mixin font-main {
+    font-size: 14px;
+    font-family: "Open Sans", arial, sans-serif;
+    line-height: 1.6;
+}

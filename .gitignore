@@ -4,3 +4,4 @@ updates
 .next/
 .env
 .prettierignore
+keys.json

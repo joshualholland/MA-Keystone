@@ -88,7 +88,7 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a className="navi-link animated heightAnimate" href="#">
+              <a className="navi-link animated heightAnimate" href="/careers">
                 CAREERS
               </a>
             </li>

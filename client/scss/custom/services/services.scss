@@ -13,13 +13,13 @@
 
 #services {
   @include media-breakpoint-up(xs) {
-    @include bannerResponsive(38% -4rem, 7.5rem, cover);
+    @include bannerResponsive(38% -4rem, 15.5rem, cover);
   }
   @include media-breakpoint-up(sm) {
-    @include bannerResponsive(38% -10rem, 9rem, cover);
+    @include bannerResponsive(38% -10rem, 17rem, cover);
   }
   @include media-breakpoint-up(md) {
-    @include bannerResponsive(38% -12rem, 11.5rem, cover);
+    @include bannerResponsive(38% -12rem, 20.5rem, cover);
   }
   @include media-breakpoint-up(lg) {
     @include bannerResponsive(38% -10.5rem, 15rem, cover);
@@ -42,66 +42,9 @@
   }
 }
 
-#servicesContentContainer {
-  display: table;
-  height: 100%;
-}
-#servicesContent {
-  display: table-cell;
-  vertical-align: middle;
-}
 .servicesContainer{
   width:80%;
 }
-.productHeader {
-  @include font-alt;
-}
-.productTable {
-  width:90%;
-  margin:auto;
-  color:#adabab;
-  font-weight:300;
-  @include media-breakpoint-up(lg){
-    width:70%;
-  }
-}
-.productRow {
-  border-top:1px solid gray;
-}
-.productName {
-  text-align: left;
-}
-.productPrice {
-  text-align:right;
-}
-
-.productsImageContainer{
-  width:100vw;
-  height:10rem;
-  margin:0;
-  padding:0;
-  background-color:black;
-  background-size:cover;
-  background-image:url('/images/services/products.jpg');
-  background-attachment: fixed;
-}
-
-.productsImageHeader{
-  text-align: center;
-  @include font-alt;
-  color:white;
-  font-weight:300;
-  font-size:1rem;
-  letter-spacing: 300;
-}
-
-.productsImage{
-  position:relative;
-  width:100%;
-  object-fit:contain;
-  opacity:0.5;
-}
-
 
 .bookButton{
   display:block;

@@ -26,6 +26,7 @@
     "npm-run-all": "^4.1.5",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
+    "react-google-maps": "^9.4.5",
     "react-multi-carousel": "^2.2.10",
     "react-router-dom": "^5.1.2",
     "react-scroll": "^1.7.14",

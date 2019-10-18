@@ -1,0 +1,48 @@
+.productHeader {
+  @include font-alt;
+}
+.productTable {
+  width: 90%;
+  margin: auto;
+  color: #adabab;
+  font-weight: 300;
+  @include media-breakpoint-up(lg) {
+    width: 70%;
+  }
+}
+.productRow {
+  border-top: 1px solid gray;
+}
+.productName {
+  text-align: left;
+}
+.productPrice {
+  text-align: right;
+}
+
+.productsImageContainer {
+  width: 100vw;
+  height: 10rem;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  background-size: cover;
+  background-image: url("/images/services/products.jpg");
+  background-attachment: fixed;
+}
+
+.productsImageHeader {
+  text-align: center;
+  @include font-alt;
+  color: white;
+  font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 300;
+}
+
+.productsImage {
+  position: relative;
+  width: 100%;
+  object-fit: contain;
+  opacity: 0.5;
+}

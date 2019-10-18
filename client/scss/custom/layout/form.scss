@@ -1,0 +1,41 @@
+@import "../../mixins.scss";
+
+.form-control + .form-control {
+  margin-top: 0.5rem;
+}
+.form-control {
+  @include font-alt;
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
+}
+
+#messageForm {
+  height: 90%;
+}
+
+.maSubmit {
+  display: block;
+  background-color: #3b3b3b;
+  color: white;
+  border-radius: 1px;
+  line-height:1rem;
+  text-align:center;
+  font-size: 0.8rem;
+  @include font-alt;
+  float:right;
+  width:100%;
+}
+.allFieldsRequired{
+    float:left;
+    color:rgb(170,170,170);
+    @include font-main;
+    font-size:0.5rem;
+}
+
+#messageContainer {
+  padding-right: 0;
+}
+
+#submitContainer {
+  padding-right: 0;
+}
