@@ -1,93 +1,147 @@
-@import '../../mixins.scss';
+@import "../../mixins.scss";
 
 .topContainer {
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    z-index: 25;
-    color: white;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 25;
+  color: white;
 }
 
-.malogo{
-    
+$opacity:0.5;
+$viewPortLogoTopOffset: 45vh;
+#malogo {
+  $width: 60vw;
+  $margin: (100vw - $width)/2;
+  width: $width;
+  left: $margin;
+  display: block;
+  position: absolute;
+  top: $viewPortLogoTopOffset;
+  z-index: 2000;
+  opacity: $opacity;
+}
+#addressHeader {
+  $width: 50vw;
+  $margin: (100vw - $width)/2 +4vw;
+  width: $width;
+  left: $margin;
+  position: absolute;
+  top: $viewPortLogoTopOffset + 5vh;
+  z-index: 2000;
+  opacity: $opacity;
+}
+@mixin widen($logo, $address, $topAdjust:$viewPortLogoTopOffset + 5vh) {
+  #addressHeader {
+    $width: $address;
+    $margin: (100vw - $width)/2 +4vw;
+    width: $width;
+    left: $margin;
+    top:$topAdjust;
+  }
+  #malogo {
+    $width: $logo;
+    $margin: (100vw - $width)/2;
+    width: $width;
+    left: $margin;
+  }
 }
 
-.craftIcons{
-    object-fit: contain;
-    margin-top:1.5rem;
-    height:2.5rem;
+@include widen(90vw,80vw);
+@include media-breakpoint-up(xs) {
+}
+@include media-breakpoint-up(sm) {
+}
+@include media-breakpoint-up(md) {
+}
+@include media-breakpoint-up(lg) {
+    @include widen(80vw,70vw);
+}
+@include media-breakpoint-up(xl) {
+    @include widen(70vw,30vw,55vh);
+}
+@media (min-width:1300px){
+    @include widen(65vw,40vw,55vh);
+}
+
+.craftIcons {
+  object-fit: contain;
+  margin-top: 1.5rem;
+  height: 2.5rem;
 }
 #tallPhoto {
-    max-height: 800px;
-    @include media-breakpoint-up(xl){
-        max-height:500px;
-    }
-    overflow: hidden;
-    object-fit: cover;
+  max-height: 800px;
+  @include media-breakpoint-up(xl) {
+    max-height: 500px;
+  }
+  overflow: hidden;
+  object-fit: cover;
 }
 
 .headerContent {
-    color: black;
-    font-size: 1.5rem;
-    @include font-alt;
+  color: black;
+  font-size: 1.5rem;
+  @include font-alt;
 
-    @include media-breakpoint-up(xs) {
-        margin-top: 2rem;
-        margin-bottom: 1.5rem;
-    }
+  @include media-breakpoint-up(xs) {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
 
-    @include media-breakpoint-up(lg) {
-        margin-bottom: 1rem;
-    }
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 1rem;
+  }
 
-    @include media-breakpoint-up(xl) {}
+  @include media-breakpoint-up(xl) {
+  }
 }
 
 .descContent {
-    font-size: 0.9rem;
-    color: rgb(95, 95, 95);
-    font-weight: 100;
-    line-height: 1.5rem;
-    padding: 0; //clear
-    $xPadding: 5rem;
-    padding-left: $xPadding;
-    padding-right: $xPadding;
+  font-size: 0.9rem;
+  color: rgb(95, 95, 95);
+  font-weight: 100;
+  line-height: 1.5rem;
+  padding: 0; //clear
+  $xPadding: 5rem;
+  padding-left: $xPadding;
+  padding-right: $xPadding;
 
-    @include media-breakpoint-up(xs) {
-        margin-bottom: 2rem;
-    }
+  @include media-breakpoint-up(xs) {
+    margin-bottom: 2rem;
+  }
 
-    @include media-breakpoint-up(lg) {
-        margin-bottom: 2.5rem;
-    }
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 2.5rem;
+  }
 
-    @include media-breakpoint-up(xl) {}
+  @include media-breakpoint-up(xl) {
+  }
 }
 
 .row.limit [class*="col-"] {
-    max-height: 30rem;
-    overflow: hidden;
+  max-height: 30rem;
+  overflow: hidden;
 }
 
 .followContainer {
-    $xMargin: 2rem;
-    margin: auto;
-    margin-top: $xMargin;
-    margin-bottom: $xMargin;
-    text-align: center;
-    width:80vw;
-    border: 1px rgb(153, 153, 153) dashed;
-    letter-spacing: 1.2rem;
+  $xMargin: 2rem;
+  margin: auto;
+  margin-top: $xMargin;
+  margin-bottom: $xMargin;
+  text-align: center;
+  width: 80vw;
+  border: 1px rgb(153, 153, 153) dashed;
+  letter-spacing: 1.2rem;
 }
 
 .followText {
-    font-weight: 300;
-    color: rgb(119, 119, 119);
-    padding-top: 1rem;
+  font-weight: 300;
+  color: rgb(119, 119, 119);
+  padding-top: 1rem;
 }
 
 #mamaDark {
-    display: block;
-    width: 10rem;
-    margin: auto;
+  display: block;
+  width: 10rem;
+  margin: auto;
 }

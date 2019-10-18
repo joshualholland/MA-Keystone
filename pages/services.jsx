@@ -1,24 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../client/components/Navbar";
 import Banner from "../client/components/Banner";
 import ProductTable from "../client/components/ProductTable";
 import Footer from "../client/components/Footer";
+import fetch from "isomorphic-unfetch";
 import "../client/scss/app.scss";
 
-export default function Services() {
-  const Product = function(name, price) {
-    this.name = name;
-    this.price = price;
-  };
+Services.getInitialProps = async ({ req }) => {
+  const res = await fetch("http://localhost:3000/api/services");
+  const json = await res.json();
+  return { req: json };
+};
 
-  const products = [];
-
-  for (let i = 0; i < 5; i++) {
-    let prod = new Product("Hair Cut", "$20");
-    products.push(prod);
-    // products.push({'Hair Cut':'$20'})
-  }
-  // console.log(products)
+function Services({ req }) {
+  
+  const products = req.services;
+  console.log(products)
 
   return (
     <>
@@ -48,23 +45,27 @@ export default function Services() {
         </p>
       </section>
       <h5 className="text-center productHeader">SERVICES</h5>
-      <section className=''>
-        <ProductTable products={products} />
+      <section className="">
+        <ProductTable products={products.length > 0 ? products : []} />
       </section>
       <h5 className="text-center productHeader">BRIDALS</h5>
       <section className="mb-5">
-        <ProductTable products={products} />
+        <ProductTable products={products.length > 0 ? products : []} />
       </section>
       <section className="productsImageContainer">
-        <div className='w-100 h-100'
-        style={{'background-color':'rgba(0,0,0,0.6)'}}>
+        <div
+          className="w-100 h-100"
+          style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
+        >
           <h5 className="px-3 pt-5 productsImageHeader">
             ENJOY AN UNFORGETTABLE SALON EXPERIENCE
           </h5>
-          <button className='btn bookButton mt-4'>BOOK AN APPOINTMENT</button>
-          </div>
+          <button className="btn bookButton mt-4">BOOK AN APPOINTMENT</button>
+        </div>
       </section>
-      <Footer/>
+      <Footer />
     </>
   );
 }
+
+export default Services;
