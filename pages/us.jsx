@@ -44,6 +44,8 @@ function Us({ req }) {
       let smallImage = path + people[i].small_image.filename;
       let largeImage = path + people[i].large_image.filename
       let about = people[i].about;
+      let key = name.first + Math.floor(Math.random()*Math.floor(10000));
+
 
       name = name.first + " " + name.last;
       items.push(
@@ -52,13 +54,13 @@ function Us({ req }) {
           <a
             className="w-100 h-100 d-block"
             data-toggle="modal"
-            data-target="#exampleModal"
+            data-target={"#" + key}
           >
             <div className="shader">
               <img src={smallImage} className="flex-image" />
             </div>
           </a>
-          {PersonalModal(name,start_date,largeImage,about)}
+          {PersonalModal(name,start_date,largeImage,about,key)}
         </li>
       );
     }

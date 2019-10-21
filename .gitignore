@@ -5,3 +5,6 @@ updates
 .env
 .prettierignore
 keys.json
+public/stylists/
+public/team/
+public/owners/

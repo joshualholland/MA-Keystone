@@ -1,9 +1,27 @@
-.modal-dialog{
-    width:70vw;
-    max-width:70vw;
+@import '../../mixins.scss';
+
+.modal {
+  z-index: 4000;
 }
 
-.modalImageFit{
-    width:100%;
-    object-fit: cover;
+.modal-title{
+
+}
+.modal-dialog {
+  width: 70vw;
+  max-width: 70vw;
+}
+
+.modalImageFit {
+  width: 100%;
+  object-fit: cover;
+}
+
+.modal-date{
+    @include font-alt;
+    font-size:1rem;
+}
+
+.modal-about{
+
 }
