@@ -8,7 +8,7 @@
   color: white;
 }
 
-$opacity:0.5;
+$opacity: 0.5;
 $viewPortLogoTopOffset: 45vh;
 #malogo {
   $width: 60vw;
@@ -31,13 +31,13 @@ $viewPortLogoTopOffset: 45vh;
   z-index: 2000;
   opacity: $opacity;
 }
-@mixin widen($logo, $address, $topAdjust:$viewPortLogoTopOffset + 5vh) {
+@mixin widen($logo, $address, $topAdjust: $viewPortLogoTopOffset + 5vh) {
   #addressHeader {
     $width: $address;
     $margin: (100vw - $width)/2 +4vw;
     width: $width;
     left: $margin;
-    top:$topAdjust;
+    top: $topAdjust;
   }
   #malogo {
     $width: $logo;
@@ -47,7 +47,7 @@ $viewPortLogoTopOffset: 45vh;
   }
 }
 
-@include widen(90vw,80vw);
+@include widen(90vw, 80vw);
 @include media-breakpoint-up(xs) {
 }
 @include media-breakpoint-up(sm) {
@@ -55,19 +55,26 @@ $viewPortLogoTopOffset: 45vh;
 @include media-breakpoint-up(md) {
 }
 @include media-breakpoint-up(lg) {
-    @include widen(80vw,70vw);
+  @include widen(80vw, 70vw);
 }
 @include media-breakpoint-up(xl) {
-    @include widen(70vw,30vw,55vh);
+  @include widen(70vw, 30vw, 55vh);
 }
-@media (min-width:1300px){
-    @include widen(65vw,40vw,55vh);
+@media (min-width: 1300px) {
+  @include widen(65vw, 40vw, 55vh);
 }
 
 .craftIcons {
   object-fit: contain;
   margin-top: 1.5rem;
   height: 2.5rem;
+  // @include media-breakpoint-up(xl) {
+  //   margin-top: 10%;
+  // }
+  // @media (min-width: 1400px) {
+  //   height:3.5rem;
+  //   margin-top: 18%;
+  // }
 }
 #tallPhoto {
   max-height: 800px;
@@ -92,8 +99,12 @@ $viewPortLogoTopOffset: 45vh;
     margin-bottom: 1rem;
   }
 
-  @include media-breakpoint-up(xl) {
-  }
+  // @include media-breakpoint-up(xl) {
+  //   padding-top: 5%;
+  // }
+  // @media (min-width: 1400px) {
+  //   padding-top: 15%;
+  // }
 }
 
 .descContent {
@@ -102,7 +113,7 @@ $viewPortLogoTopOffset: 45vh;
   font-weight: 100;
   line-height: 1.5rem;
   padding: 0; //clear
-  $xPadding: 5rem;
+  $xPadding: 10%;
   padding-left: $xPadding;
   padding-right: $xPadding;
 
@@ -112,9 +123,18 @@ $viewPortLogoTopOffset: 45vh;
 
   @include media-breakpoint-up(lg) {
     margin-bottom: 2.5rem;
+    $xPadding: 15%;
+    padding-left: $xPadding;
+    padding-right: $xPadding;
   }
 
   @include media-breakpoint-up(xl) {
+    $xPadding: 10%;
+    padding-left: $xPadding;
+    padding-right: $xPadding;
+  }
+  @media (min-width: 1400px) {
+    margin-top: 5%;
   }
 }
 
