@@ -47,7 +47,7 @@ module.exports = nextApp => keystoneApp => {
   );
   // Stylist data
   keystoneApp.get(
-    "/api/stylist",
+    "/api/stylists",
     keystone.middleware.api,
     routes.api.stylists.list
   );

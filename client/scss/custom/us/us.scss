@@ -1,24 +1,158 @@
-#usHeader{
-   
-    @mixin contentResponsive($size,$spacing){
-        font-size:$size;
-        letter-spacing:$spacing;
+@import "../../mixins.scss";
+
+#usHeader {
+  @mixin contentResponsive($size, $spacing) {
+    font-size: $size;
+    letter-spacing: $spacing;
+  }
+  @include contentResponsive(2rem, 0.05rem);
+  @include media-breakpoint-up(xs) {
+    @include contentResponsive(2.5rem, 0.05rem);
+  }
+  @include media-breakpoint-up(sm) {
+    @include contentResponsive(3rem, 0.05rem);
+  }
+  @include media-breakpoint-up(md) {
+    @include contentResponsive(3.5rem, 0.05rem);
+  }
+  @include media-breakpoint-up(lg) {
+    @include contentResponsive(4rem, 0.05rem);
+  }
+  @include media-breakpoint-up(xl) {
+    @include contentResponsive(5rem, 0.2rem);
+  }
+}
+
+.usButtonsContainer {
+  margin-top: 4rem;
+}
+
+.usBtnContainer {
+  text-align: center;
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+}
+
+.usBtnContainer + .usBtnContainer {
+  @include media-breakpoint-down(sm) {
+    margin-top: 1rem;
+  }
+}
+
+.usButtons {
+  padding: 0.25rem 20%;
+  @include media-breakpoint-down(sm) {
+    padding: 0.25rem 5%;
+  }
+  background-color: white;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  border-radius: 100px;
+  @include font-main;
+  text-transform: uppercase;
+  outline: none !important;
+  text-align: center;
+}
+
+.usButtons.active {
+  color: black !important;
+  border-color: black !important;
+}
+
+.usButtons:hover {
+  transition: 0.5s;
+  border-color: gray;
+  border-width: 1px;
+  color: gray;
+}
+
+$margin: 1rem;
+$unitSize: 13rem;
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-radius: 50%;
+  border: 0px solid rgba(255, 255, 255, 0);
+  border-image-width:0px;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+$containerUnitWidth: $margin * 2 + $unitSize;
+.flex-item {
+  padding: 20px;
+  width: $unitSize;
+  height: $unitSize;
+  margin-top: 10px;
+  border-radius: 50%;
+  border: 0px solid rgba(255, 255, 255, 0);
+  border-image-width:0px;
+
+  @mixin resize($unitSize) {
+    width: $unitSize;
+    height: $unitSize;
+  }
+  @include media-breakpoint-up(lg) {
+    @include resize(18rem);
+  }
+  @include media-breakpoint-up(xl) {
+    @include resize(23rem);
+    .flex-name{
+      top:14rem;
+      font-size:2.4rem;
+      line-height:2.2rem;
     }
-    @include contentResponsive(2rem,0.05rem);
-    @include media-breakpoint-up(xs){
-        @include contentResponsive(2.5rem,0.05rem)
+    .bubbleContainer{
+
     }
-    @include media-breakpoint-up(sm){
-        @include contentResponsive(3rem,0.05rem)
-    }
-    @include media-breakpoint-up(md){
-        @include contentResponsive(3.5rem,0.05rem)
-    }
-    @include media-breakpoint-up(lg){
-        @include contentResponsive(4rem,0.05rem)
-    }
-    @include media-breakpoint-up(xl){
-        @include contentResponsive(5rem,0.2rem)
-        
-    }
+  }
+  
+}
+
+.shader {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  border-radius: 50%;
+  border: 0px solid rgba(255, 255, 255, 0);
+}
+
+.flex-image {
+  border: 0px solid rgba(255, 255, 255, 0);
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  opacity: 0.8;
+  // overflow:hidden;
+}
+
+.flex-image:hover {
+  transition: 0.5s;
+  border: 0px solid rgba(255, 255, 255, 0);
+  opacity: 1;
+}
+
+.flex-name {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  top: 8rem;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2rem;
+  z-index: 2000;
+  -webkit-font-smoothing: antialiased;
 }

@@ -15,7 +15,7 @@ Services.getInitialProps = async ({ req }) => {
 function Services({ req }) {
   
   const products = req.services;
-  console.log(products)
+  // console.log(products)
 
   return (
     <>

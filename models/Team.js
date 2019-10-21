@@ -9,13 +9,13 @@ var smallImgStorage = new keystone.Storage({
     adapter: keystone.Storage.Adapters.FS,
     fs: {
         // required; path where the files should be stored
-        path: keystone.expandPath('../../public/img/team/small'),
+        path: keystone.expandPath('./public/team'),
         generateFilename: function (file, index) {
             return file.originalname;
         },
         whenExists: 'error',
         // path where files will be served
-        publicPath: '../../public/img/team/small',
+        publicPath: './public/team',
     },
 });
 
@@ -24,13 +24,13 @@ var largeImgStorage = new keystone.Storage({
     adapter: keystone.Storage.Adapters.FS,
     fs: {
         // required; path where the files should be stored
-        path: keystone.expandPath('../../public/img/team/large'),
+        path: keystone.expandPath('./public/team'),
         generateFilename: function (file, index) {
             return file.originalname;
         },
         whenExists: 'error',
         // path where files will be served
-        publicPath: '../../public/img/team/large',
+        publicPath: './public/team',
     },
 });
 
