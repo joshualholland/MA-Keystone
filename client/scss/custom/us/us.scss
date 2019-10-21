@@ -68,16 +68,20 @@
   color: gray;
 }
 
+.flex-container {
+  display: none;
+}
+
 $margin: 1rem;
 $unitSize: 13rem;
-.flex-container {
+.flex-container.active {
   padding: 0;
   margin: 0;
   list-style: none;
   border-radius: 50%;
   border: 0px solid rgba(255, 255, 255, 0);
-  border-image-width:0px;
-  
+  border-image-width: 0px;
+
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -86,6 +90,19 @@ $unitSize: 13rem;
 
   -webkit-flex-flow: row wrap;
   justify-content: center;
+
+  animation-name: fadeIn;
+  animation-duration: 0.7s;
+  animation-timing-function: linear;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.5;
+  }
+  100%{
+    opacity:1;
+  }
 }
 
 $containerUnitWidth: $margin * 2 + $unitSize;
@@ -106,7 +123,6 @@ $containerUnitWidth: $margin * 2 + $unitSize;
   @include media-breakpoint-up(xl) {
     @include resize(23rem);
   }
-  
 }
 
 .shader {
@@ -142,12 +158,12 @@ $containerUnitWidth: $margin * 2 + $unitSize;
   font-weight: 400;
   line-height: 1.2rem;
   z-index: 2000;
-  opacity:0.9;
+  opacity: 0.9;
   -webkit-font-smoothing: antialiased;
 
-  @include media-breakpoint-up(xl){
-      top:14rem;
-      font-size:2.0rem;
-      line-height:2.2rem;
+  @include media-breakpoint-up(xl) {
+    top: 14rem;
+    font-size: 2rem;
+    line-height: 1.9rem;
   }
 }
