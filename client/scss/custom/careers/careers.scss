@@ -1,8 +1,15 @@
 .careersContainer{
-    margin-top:4rem;
+    margin-top:10rem;
     margin-bottom:2rem;
-    margin-left:16rem;
-    margin-right:16rem;
+    margin:auto;
+    width:90vw;
+
+    @include media-breakpoint-up(xs){
+    }
+    @include media-breakpoint-up(xs){}
+    @include media-breakpoint-up(xs){}
+    @include media-breakpoint-up(xs){}
+    @include media-breakpoint-up(xs){}
 }
 .careersHeader{
     text-align:center;

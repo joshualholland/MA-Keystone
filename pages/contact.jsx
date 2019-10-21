@@ -7,6 +7,7 @@ import Address from "../client/components/Address";
 import Email from "../client/components/Email";
 import Footer from "../client/components/Footer";
 import GoogleJSMap from "../client/components/GoogleJSMap";
+import ConfirmMessage from "../client/components/ConfirmMessage";
 
 export default class Contact extends Component {
   constructor(props) {
@@ -29,6 +30,9 @@ export default class Contact extends Component {
           "Content-type": "application/json"
         },
         body: JSON.stringify(this.state)
+      }).then((e) => {
+        $(".maSubmit").toggle();
+        $("#confirmMessage").addClass("active");
       });
     } catch (e) {
       throw e;
@@ -44,6 +48,7 @@ export default class Contact extends Component {
           sectionName="contact"
           content="CONTACT"
         />
+        <ConfirmMessage />
         <div className="container slimContainer">
           <h3 className="mt-5">
             Reach out to us with questions or requests! We would love to get to
@@ -101,8 +106,10 @@ export default class Contact extends Component {
               <div className="col-2 allFieldsRequired">
                 <i className="fa fa-info-circle"> All fields are required</i>
               </div>
-              <div className="col-4 col-lg-2">
-                <input type="submit" className="btn maSubmit" value="SUBMIT" />
+              <div className="col-6 col-lg-3">
+                <button type="submit" className="btn maSubmit" value="SUBMIT">
+                  SUBMIT
+                </button>
               </div>
             </div>
           </form>

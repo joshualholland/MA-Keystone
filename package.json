@@ -45,6 +45,6 @@
     "node-sass": "^4.12.0"
   },
   "nodemonConfig": {
-    "delay": "10000"
+    "delay": "1000"
   }
 }

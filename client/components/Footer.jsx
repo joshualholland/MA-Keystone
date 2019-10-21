@@ -25,9 +25,12 @@ export default function Footer() {
             ></img>
             <div className="infoContainer">
               <h5 className="footerHeaders">WE ARE OPEN</h5>
-              <p className="footerInfo">Monday-Thursday: 8am to 8pm</p>
-              <p className="footerInfo">Friday: 9am to 5pm</p>
-              <p className="footerInfo">Saturday: 9am to 4pm</p>
+              <p className="footerInfo">Monday-Thursday: </p>
+              <p className="footerInfo">8am to 8pm</p>
+              <p className="footerInfo">Friday: </p>
+              <p className="footerInfo">9am to 5pm</p>
+              <p className="footerInfo">Saturday: </p>
+              <p className="footerInfo">9am to 4pm</p>
             </div>
           </div>
         </section>

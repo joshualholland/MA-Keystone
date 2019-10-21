@@ -58,7 +58,7 @@ module.exports = nextApp => keystoneApp => {
 
   //MailChimp
   keystoneApp.post("/api/careers", async (req, res, next) => {
-    console.log(req.body);
+    // res.send('What the fk')
     const name = req.body.name;
     const email = req.body.email;
     const desiredPosition = req.body.desiredPosition;
@@ -78,8 +78,9 @@ module.exports = nextApp => keystoneApp => {
       email;
     try {
       await sendEmail(to, from, subject, text);
+      res.send('OK')
     } catch (e) {
-      console.log(e);
+      console.log(e + "\n ERROR");
       res.status(500);
     }
   });
@@ -91,12 +92,13 @@ module.exports = nextApp => keystoneApp => {
     const message = req.body.message;
 
     const to = "foundanoreo@gmail.com"; // Change to MA Amanda's email
-    const from = name;
+    const from = email;
     const subject = "Inquiry from: " + name;
     const text =
       name + "\n\n" + "Message: \n" + message + "\n\n" + "Reply: " + email;
     try {
       await sendEmail(to, from, subject, text);
+      res.send('OK')
     } catch (e) {
       console.log(e);
       res.status(500);

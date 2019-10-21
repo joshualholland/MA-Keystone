@@ -8,7 +8,7 @@ export default function Banner(props) {
   
   return (
     <>
-      <section className="bannerContainer" id={props.sectionName} style={style}>
+      <section className="container-fluid bannerContainer" id={props.sectionName} style={style}>
         <div className='w-100 h-100' style={{backgroundColor:'rgb(0,0,0,0.3)'}}>
           <div className="bannerContent" id={props.sectionName + "Content"}>
             <h1 className='bannerHeader' id={props.sectionName + "Header"}

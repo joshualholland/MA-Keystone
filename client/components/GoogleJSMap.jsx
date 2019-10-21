@@ -30,7 +30,7 @@ const GoogleJSMap = React.memo(() =>{
 
   return (
     <>
-      <div className='mapsContainer'>
+      <div className='container-fluid px-0 mx-0'>
         <Wrapper
           googleMapURL={url}
           loadingElement={

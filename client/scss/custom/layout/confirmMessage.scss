@@ -1,0 +1,10 @@
+#confirmMessage{
+    display:none;
+    background-color: #B8E7B3;
+    font-size: 2rem;
+    color: rgb(20,20,20);
+}
+
+#confirmMessage.active{
+    display:block;
+}

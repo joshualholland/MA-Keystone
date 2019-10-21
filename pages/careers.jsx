@@ -4,6 +4,7 @@ import Navbar from "../client/components/Navbar";
 import Footer from "../client/components/Footer";
 import "../client/scss/app.scss";
 import GoogleJSMap from "../client/components/GoogleJSMap";
+import ConfirmMessage from "../client/components/ConfirmMessage";
 
 export default class Careers extends Component {
   constructor(props) {
@@ -27,6 +28,9 @@ export default class Careers extends Component {
           "Content-type": "application/json"
         },
         body: JSON.stringify(this.state)
+      }).then((response)=>{
+        $(".maSubmit").toggle();
+        $("#confirmMessage").addClass("active");
       });
     } catch (e) {
       throw e;
@@ -42,11 +46,14 @@ export default class Careers extends Component {
           sectionName="careers"
           content="CAREERS"
         />
+        <ConfirmMessage />
         <div className="careersContainer">
-          <h5 className="careersHeader mx-0 mb-5">
+          <h5 className="careersHeader mx-0 my-5">
             Interested in joining our team? Tell us a little bit about yourself
           </h5>
-          <form onSubmit={this.handleSubmit.bind(this)}>
+          <form
+            onSubmit={this.handleSubmit.bind(this)}
+          >
             <div className="form-group">
               <div className="row">
                 <div className="col-12 col-lg-6">
@@ -94,16 +101,14 @@ export default class Careers extends Component {
                   />
                 </div>
               </div>
-              <div className="row justify-content-between">
+              <div className="row justify-content-between mt-3">
                 <div className="col-3 allFieldsRequired">
                   <i className="fa fa-info-circle"> All fields are required</i>
                 </div>
-                <div className="col-3" id="submitContainer">
-                  <input
-                    type="submit"
-                    className="btn maSubmit"
-                    value="SUBMIT"
-                  ></input>
+                <div className="col-6 col-lg-3" id="submitContainer">
+                  <button type="submit" className="btn maSubmit">
+                    SUBMIT
+                  </button>
                 </div>
               </div>
             </div>

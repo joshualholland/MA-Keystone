@@ -3,6 +3,12 @@
 .form-control + .form-control {
   margin-top: 0.5rem;
 }
+textarea.form-control{
+  margin-top: 0.5rem;
+  @include media-breakpoint-up(lg){
+    margin-top:0;
+  }
+}
 .form-control {
   @include font-alt;
   font-size: 0.8rem;
@@ -19,24 +25,23 @@
   background-color: #3b3b3b;
   color: white;
   border-radius: 1px;
-  line-height:1rem;
-  text-align:center;
+  line-height: 1rem;
+  text-align: center;
   font-size: 0.8rem;
   @include font-alt;
-  float:right;
-  width:100%;
+  float: right;
+  width: 100%;
 }
-.allFieldsRequired{
-    float:left;
-    color:rgb(170,170,170);
-    @include font-main;
-    font-size:0.5rem;
+.allFieldsRequired {
+  float: left;
+  color: rgb(170, 170, 170);
+  @include font-main;
+  font-size: 0.5rem;
 }
 
 #messageContainer {
-  padding-right: 0;
-}
-
-#submitContainer {
-  padding-right: 0;
+  @include media-breakpoint-up(lg) {
+    padding-right: 0;
+    margin-top:0;
+  }
 }
