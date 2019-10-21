@@ -85,7 +85,7 @@ $unitSize: 13rem;
   display: flex;
 
   -webkit-flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 $containerUnitWidth: $margin * 2 + $unitSize;
@@ -147,7 +147,7 @@ $containerUnitWidth: $margin * 2 + $unitSize;
 
   @include media-breakpoint-up(xl){
       top:14rem;
-      font-size:2.4rem;
+      font-size:2.0rem;
       line-height:2.2rem;
   }
 }
