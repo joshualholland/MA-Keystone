@@ -95,8 +95,6 @@ $containerUnitWidth: $margin * 2 + $unitSize;
   height: $unitSize;
   margin-top: 10px;
   border-radius: 50%;
-  border: 0px solid rgba(255, 255, 255, 0);
-  border-image-width:0px;
 
   @mixin resize($unitSize) {
     width: $unitSize;
@@ -107,14 +105,6 @@ $containerUnitWidth: $margin * 2 + $unitSize;
   }
   @include media-breakpoint-up(xl) {
     @include resize(23rem);
-    .flex-name{
-      top:14rem;
-      font-size:2.4rem;
-      line-height:2.2rem;
-    }
-    .bubbleContainer{
-
-    }
   }
   
 }
@@ -124,11 +114,9 @@ $containerUnitWidth: $margin * 2 + $unitSize;
   height: 100%;
   background-color: black;
   border-radius: 50%;
-  border: 0px solid rgba(255, 255, 255, 0);
 }
 
 .flex-image {
-  border: 0px solid rgba(255, 255, 255, 0);
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -154,5 +142,12 @@ $containerUnitWidth: $margin * 2 + $unitSize;
   font-weight: 400;
   line-height: 1.2rem;
   z-index: 2000;
+  opacity:0.9;
   -webkit-font-smoothing: antialiased;
+
+  @include media-breakpoint-up(xl){
+      top:14rem;
+      font-size:2.4rem;
+      line-height:2.2rem;
+  }
 }
