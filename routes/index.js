@@ -33,7 +33,7 @@ module.exports = nextApp => keystoneApp => {
 
   // Gets Bridal data
   keystoneApp.get(
-    "/api/bridal",
+    "/api/bridals",
     keystone.middleware.api,
     routes.api.bridal.list
   );
