@@ -10,7 +10,7 @@ exports.list = function (req, res) {
         if (err) return res.apiError('database error', err);
         // Handle Respones
         res.apiResponse({
-            bridal: items
+            bridals: items
         });
     });
 }

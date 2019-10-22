@@ -31,7 +31,10 @@ $mobileBarOpacity: 0.9;
 
 #navi-nav {
     float: right;
-    // height: 100%;
+    height:90vh;
+    @include media-breakpoint-down(xl){
+        overflow-y:scroll;
+    }
 }
 
 .navi-list {
@@ -72,6 +75,12 @@ $mobileBarOpacity: 0.9;
 .mn-soc-link {
     width: 34px;
     height: 34px;
+    @include media-breakpoint-down(xs){
+        $unitSize:25px;
+        height:$unitSize;
+        width:$unitSize;
+        line-height:$unitSize;
+    }
     line-height: 33px;
     text-align: center;
     font-size: 12px;
@@ -178,54 +187,6 @@ a.navi-link.sm_icons {
 
 .mobileDisplayDropDown {animation-name: mobileDisplayDropDown;}
 .mobileHideDropDown {animation-name: mobileHideDropDown}
-
-// $navBarMaxHeight : $height;
-// $navBarMinimalHeight : $height - 2;
-
-
-// @keyframes colorChange {
-//     0% {background: transparent;
-//         height: $navBarMaxHeight;}
-//     100% {background: black;
-//         opacity: $mobileBarOpacity;
-//         height: $navBarMinimalHeight;}}
-
-// @keyframes colorTransparent {
-//     0% {background: black;
-//         opacity: $mobileBarOpacity;
-//         height: $navBarMinimalHeight;}
-//     100% {background: transparent;
-//         height: $navBarMaxHeight;}}
-
-
-// @keyframes mobilePullUp {
-//     0% {top: $navBarMaxHeight;}
-//     100% {top: $navBarMinimalHeight;}}
-
-// @keyframes mobilePullDown {
-//     0% {top: $navBarMinimalHeight;}
-//     100% {top: $navBarMaxHeight;}}
-
-// @keyframes mobileDisplayDropDown {
-//     0% {height: 0px;}
-//     100% {height: 100px;}}
-
-// @keyframes mobileHideDropDown {
-//     0% {height: 100px;}
-//     100% {height: 0px;}}
-
-
-// @keyframes navBarMinimize {
-//     0% {height: $navBarMaxHeight;
-//         line-height: $navBarMaxHeight;}
-//     100% {height: $navBarMinimalHeight;
-//         line-height: $navBarMinimalHeight;}}
-
-// @keyframes navBarMaximize {
-//     0% {height: $navBarMinimalHeight;
-//         line-height: $navBarMinimalHeight;}
-//     100% {height: $navBarMaxHeight;
-//         line-height: $navBarMaxHeight;}}
 
 @mixin navbarResponsive($logoHeight, $height:$height) {
     $logoMaxHeight: $logoHeight;

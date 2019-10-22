@@ -12,21 +12,21 @@
 }
 
 #services {
-  @include media-breakpoint-up(xs) {
-    @include bannerResponsive(38% -4rem, 15.5rem, cover);
-  }
-  @include media-breakpoint-up(sm) {
-    @include bannerResponsive(38% -10rem, 17rem, cover);
-  }
-  @include media-breakpoint-up(md) {
-    @include bannerResponsive(38% -12rem, 20.5rem, cover);
-  }
-  @include media-breakpoint-up(lg) {
-    @include bannerResponsive(38% -10.5rem, 15rem, cover);
-  }
-  @include media-breakpoint-up(xl) {
-    @include bannerResponsive(38% -10.5rem, 17rem, cover);
-  }
+  // @include media-breakpoint-up(xs) {
+  //   @include bannerResponsive(38% -4rem, 15.5rem, cover);
+  // }
+  // @include media-breakpoint-up(sm) {
+  //   @include bannerResponsive(38% -10rem, 17rem, cover);
+  // }
+  // @include media-breakpoint-up(md) {
+  //   @include bannerResponsive(38% -12rem, 20.5rem, cover);
+  // }
+  // @include media-breakpoint-up(lg) {
+  //   @include bannerResponsive(38% -10.5rem, 15rem, cover);
+  // }
+  // @include media-breakpoint-up(xl) {
+  //   @include bannerResponsive(38% -10.5rem, 17rem, cover);
+  // }
 
   @media (min-width: "1350px") {
     @include bannerResponsive(38% -12rem, 20rem, cover);

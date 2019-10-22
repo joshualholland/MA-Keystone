@@ -7,15 +7,18 @@ import fetch from "isomorphic-unfetch";
 import "../client/scss/app.scss";
 
 Services.getInitialProps = async ({ req }) => {
-  const res = await fetch("http://localhost:3000/api/services");
-  const json = await res.json();
-  return { req: json };
+  const servicesRes = await fetch("http://localhost:3000/api/services");
+  const servicesJson = await servicesRes.json();
+  const bridalsRes = await fetch("http://localhost:3000/api/bridals");
+  const bridalsJson = await bridalsRes.json();
+  return { req: { servicesJson, bridalsJson } };
 };
 
 function Services({ req }) {
-  
-  const products = req.services;
-  // console.log(products)
+  const services = req.servicesJson.services;
+  const bridals = req.bridalsJson.bridals;
+  console.log(services);
+  console.log(bridals);
 
   return (
     <>
@@ -46,11 +49,11 @@ function Services({ req }) {
       </section>
       <h5 className="text-center productHeader">SERVICES</h5>
       <section className="">
-        <ProductTable products={products.length > 0 ? products : []} />
+        <ProductTable products={services.length > 0 ? services : []} />
       </section>
       <h5 className="text-center productHeader">BRIDALS</h5>
       <section className="mb-5">
-        <ProductTable products={products.length > 0 ? products : []} />
+        <ProductTable products={bridals.length > 0 ? bridals : []} />
       </section>
       <section className="productsImageContainer">
         <div
@@ -60,7 +63,9 @@ function Services({ req }) {
           <h5 className="px-3 pt-5 productsImageHeader">
             ENJOY AN UNFORGETTABLE SALON EXPERIENCE
           </h5>
-          <button className="btn bookButton mt-4">BOOK AN APPOINTMENT</button>
+          <button className="btn bookButton mt-4">
+            <a href="/contact" style={{textDecoration:'none !important'}}>BOOK AN APPOINTMENT</a>
+          </button>
         </div>
       </section>
       <Footer />
