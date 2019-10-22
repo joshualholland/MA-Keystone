@@ -5,6 +5,7 @@ import ProductTable from "../client/components/ProductTable";
 import Footer from "../client/components/Footer";
 import fetch from "isomorphic-unfetch";
 import "../client/scss/app.scss";
+import "../client/scss/custom/layout/fadeIn.scss";
 
 Services.getInitialProps = async ({ req }) => {
   const servicesRes = await fetch("http://localhost:3000/api/services");

@@ -18,13 +18,13 @@
 @import './custom/careers/careers.scss';
 
 
-body {
-  color: #111;
-  font-size: 14px;
-  font-family: "Open Sans", arial, sans-serif;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
+  body {
+    color: #111;
+    font-size: 14px;
+    font-family: "Open Sans", arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
 
 .font-alt {
   @include font-alt;

@@ -7,6 +7,7 @@ import "../client/scss/app.scss";
 import jquery from "jquery";
 import dateParser from "../customModules/dateParser";
 import Footer from "../client/components/Footer";
+import "../client/scss/custom/layout/fadeIn.scss";
 
 Us.getInitialProps = async ({ req }) => {
   const stylistRes = await fetch("http://localhost:3000/api/stylists");

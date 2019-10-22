@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Navbar from "../client/components/Navbar";
 import Banner from "../client/components/Banner";
 import "../client/scss/app.scss";
+import "../client/scss/custom/layout/fadeIn.scss";
 import CallUs from "../client/components/CallUs";
 import Address from "../client/components/Address";
 import Email from "../client/components/Email";

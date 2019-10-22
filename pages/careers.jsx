@@ -3,6 +3,7 @@ import Banner from "../client/components/Banner";
 import Navbar from "../client/components/Navbar";
 import Footer from "../client/components/Footer";
 import "../client/scss/app.scss";
+import "../client/scss/custom/layout/fadeIn.scss";
 import GoogleJSMap from "../client/components/GoogleJSMap";
 import ConfirmMessage from "../client/components/ConfirmMessage";
 
