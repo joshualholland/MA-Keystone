@@ -64,4 +64,17 @@ const mailgunContact = async (req, res, next) => {
   }
 };
 
-module.exports = {mailgunCareers,mailgunContact};
+const requireUser = function(req, res, next) {
+  if (!req.user) {
+    req.flash("error", "Please sign in to this access this page.");
+    res.redirect("/keystone/signin");
+  } else {
+    next();
+  }
+};
+
+const adminView = function(req,res){
+  res.redirect('/')
+}
+
+module.exports = { mailgunCareers, mailgunContact, requireUser, adminView };

@@ -4,29 +4,29 @@ export default function PersonalModal(name, startDate, image, about,key) {
   return (
     <>
       <div
-        class="modal fade"
+        className="modal fade"
         id={key}
         tabindex="-1"
         role="dialog"
         aria-labelledby="exampleModalLabelz"
         aria-hidden="true"
       >
-        <div class="modal-dialog mx-auto" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalzLabel">
+        <div className="modal-dialog mx-auto" role="document">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title" id="exampleModalzLabel">
                 {name}
               </h5>
               <button
                 type="button"
-                class="close"
+                className="close"
                 data-dismiss="modal"
                 aria-label="Close"
               >
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body">
+            <div className="modal-body">
               <div className='row'>
                 <div className='col-12 col-md-6'>
                   <img className='modalImageFit' src={image}/>

@@ -6,6 +6,7 @@ var mailgunLoader = require("mailgun-js");
 const keyRing = require("../keys.json");
 const middleware = require('./middleware.js');
 
+
 var routes = {
   api: importRoutes("./api")
 };
@@ -16,6 +17,9 @@ module.exports = nextApp => keystoneApp => {
   const handle = nextApp.getRequestHandler();
 
   keystoneApp.use(bodyParser.json());
+
+  keystoneApp.get("/admin",middleware.requireUser, middleware.adminView);
+
 
   // Gets Bridal data
   keystoneApp.get(
