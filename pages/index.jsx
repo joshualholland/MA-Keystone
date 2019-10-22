@@ -58,9 +58,9 @@ export default class Home extends Component {
             <img className="w-100" src="/images/landing/landing1.jpg"></img>
           </div>
           <div className="col-12 col-xl-6 contentContainer text-center">
-            <div className="row text-center mt-xl-5">
+            <div className="row text-center mt-xl-5 pt-xl-5">
               <h3 className="headerContent text-center col-12" id='culture'>CULTURE</h3>
-              <p className="descContent mt-xl-2">
+              <p className="descContent mt-xl-5">
                 We are passionate about creating a culture at Morgan Ashley that
                 is both peaceful and inspiring. Our hope is to give you an
                 experience that will refresh you from the moment you walk
