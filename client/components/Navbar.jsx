@@ -93,12 +93,15 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a className="navi-link animated heightAnimate" href="tel:205-995-2480">
-                <i className='fa fa-phone mr-2'/>
+              <a
+                className="navi-link animated heightAnimate"
+                href="tel:205-995-2480"
+              >
+                <i className="fa fa-phone mr-2" />
                 205-995-2480
               </a>
             </li>
-            <li>
+            <li className='mr-2'>
               <a
                 className="navi-link animated sm_icons"
                 href="https://www.facebook.com/Morgan-Ashley-Studio-Salon-1831296120421943/"
@@ -111,6 +114,8 @@ const Navbar = () => {
                   <i className="fa fa-facebook"></i>
                 </span>
               </a>
+            </li>
+            <li className='mr-2'>
               <a
                 className="navi-link animated sm_icons"
                 href="https://www.instagram.com/morganashleysalon/"
@@ -119,6 +124,8 @@ const Navbar = () => {
                   <i className="fa fa-instagram"></i>
                 </span>
               </a>
+            </li>
+            <li className='mr-2'>
               <a
                 className="navi-link animated sm_icons"
                 href="https://www.pinterest.com/morgansalon"

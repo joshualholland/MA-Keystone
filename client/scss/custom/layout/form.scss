@@ -32,6 +32,12 @@ textarea.form-control{
   float: right;
   width: 100%;
 }
+.maSubmit:hover{
+  transition:0.5s;
+  color:black;
+  background-color:white;
+  border:1px solid black;
+}
 .allFieldsRequired {
   float: left;
   color: rgb(170, 170, 170);

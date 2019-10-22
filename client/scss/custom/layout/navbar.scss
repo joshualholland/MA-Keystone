@@ -31,8 +31,8 @@ $mobileBarOpacity: 0.9;
 
 #navi-nav {
     float: right;
-    height:90vh;
     @include media-breakpoint-down(lg){
+        height:90vh;
         overflow-y:scroll;
     }
 }

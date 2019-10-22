@@ -63,7 +63,7 @@ function Services({ req }) {
           <h5 className="px-3 pt-5 productsImageHeader">
             ENJOY AN UNFORGETTABLE SALON EXPERIENCE
           </h5>
-          <button className="btn bookButton mt-4">
+          <button className="btn bookButton my-4">
             <a href="/contact" style={{textDecoration:'none !important'}}>BOOK AN APPOINTMENT</a>
           </button>
         </div>
