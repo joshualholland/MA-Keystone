@@ -43,9 +43,14 @@ export default class Home extends Component {
             <BannerCarousel height={this.state.height} />
             <img id="malogo" src="/images/landing/malogo.svg" />
             <img id="addressHeader" src="/images/landing/WORKPLZ.svg" />
-            <a href='#scroll1' className='scroll-down'>
+            <Link 
+            to='culture'
+            className='scroll-down'
+            smooth={true}
+            offset={-90}
+            duration={800}>
               <i className='fa fa-angle-down scroll-down-icon'></i>
-            </a>
+            </Link>
           </div>
         </div>
         <section className="row overflow-hidden no-gutters ">
@@ -54,7 +59,7 @@ export default class Home extends Component {
           </div>
           <div className="col-12 col-xl-6 contentContainer text-center">
             <div className="row text-center mt-xl-5">
-              <h3 className="headerContent text-center col-12">CULTURE</h3>
+              <h3 className="headerContent text-center col-12" id='culture'>CULTURE</h3>
               <p className="descContent mt-xl-2">
                 We are passionate about creating a culture at Morgan Ashley that
                 is both peaceful and inspiring. Our hope is to give you an
