@@ -1,11 +1,12 @@
-@import '../../mixins.scss';
+@import "../../mixins.scss";
 
 .modal {
   z-index: 4000;
 }
-
-.modal-title{
-
+.modal-open {
+  padding-right: 0px !important;
+}
+.modal-title {
 }
 .modal-dialog {
   width: 70vw;
@@ -17,11 +18,10 @@
   object-fit: cover;
 }
 
-.modal-date{
-    @include font-alt;
-    font-size:1rem;
+.modal-date {
+  @include font-alt;
+  font-size: 1rem;
 }
 
-.modal-about{
-
+.modal-about {
 }

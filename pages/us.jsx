@@ -5,7 +5,7 @@ import PersonalModal from "../client/components/PersonalModal";
 import fetch from "isomorphic-unfetch";
 import "../client/scss/app.scss";
 import jquery from "jquery";
-import dateParser from "../customModules/dateParser"
+import dateParser from "../customModules/dateParser";
 
 Us.getInitialProps = async ({ req }) => {
   const stylistRes = await fetch("http://localhost:3000/api/stylists");
@@ -25,7 +25,7 @@ function Us({ req }) {
   const teamList = req.teamJson.team;
   const ownersList = req.ownersJson.owners;
 
-  console.log(req.teamJson)
+  console.log(req.teamJson);
 
   function createPeopleBubbles(peopleList, path) {
     const people = peopleList;
@@ -42,15 +42,13 @@ function Us({ req }) {
       let name = people[i].name;
       let start_date = dateParser(people[i].start_date);
       let smallImage = path + people[i].small_image.filename;
-      let largeImage = path + people[i].large_image.filename
+      let largeImage = path + people[i].large_image.filename;
       let about = people[i].about;
-      let key = name.first + Math.floor(Math.random()*Math.floor(10000));
-
+      let key = name.first + Math.floor(Math.random() * Math.floor(10000));
 
       name = name.first + " " + name.last;
       items.push(
         <li key={i} className="flex-item">
-          <span className="flex-name">{name}</span>
           <a
             className="w-100 h-100 d-block"
             data-toggle="modal"
@@ -60,7 +58,8 @@ function Us({ req }) {
               <img src={smallImage} className="flex-image" />
             </div>
           </a>
-          {PersonalModal(name,start_date,largeImage,about,key)}
+          <span className="flex-name">{name}</span>
+          {PersonalModal(name, start_date, largeImage, about, key)}
         </li>
       );
     }
@@ -164,7 +163,6 @@ function Us({ req }) {
           </div>
         </div>
       </div>
-     
     </>
   );
 }

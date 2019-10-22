@@ -6,7 +6,8 @@ import Footer from "../client/components/Footer";
 import "../client/scss/app.scss";
 import jquery from "jquery";
 import Loader from "react-loader";
-// import window from ''
+import { Link, animateScroll as scroll } from "react-scroll";
+
 
 export default class Home extends Component {
   constructor(props) {
@@ -42,7 +43,6 @@ export default class Home extends Component {
             <BannerCarousel height={this.state.height} />
             <img id="malogo" src="/images/landing/malogo.svg" />
             <img id="addressHeader" src="/images/landing/WORKPLZ.svg" />
-            {/* <div id='landingAddressHeader'>7350 CAHABA VALLEY RD, BIRMINGHAM</div> */}
           </div>
         </div>
         <section className="row overflow-hidden no-gutters ">

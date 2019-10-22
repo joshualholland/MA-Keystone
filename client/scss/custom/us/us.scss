@@ -100,8 +100,8 @@ $unitSize: 13rem;
   0% {
     opacity: 0.5;
   }
-  100%{
-    opacity:1;
+  100% {
+    opacity: 1;
   }
 }
 
@@ -151,19 +151,32 @@ $containerUnitWidth: $margin * 2 + $unitSize;
   display: inline-block;
   position: relative;
   width: 100%;
-  top: 8rem;
+  bottom: 8rem;
   text-align: center;
   color: white;
   font-size: 1.5rem;
   font-weight: 400;
-  line-height: 1.2rem;
-  z-index: 2000;
+  line-height: 1.4rem;
   opacity: 0.9;
   -webkit-font-smoothing: antialiased;
 
+  @mixin nameResponsive($bottom, $fontSize) {
+    bottom: $bottom;
+    font-size: $fontSize;
+    line-height: $fontSize*0.95;
+  }
+
+  @include nameResponsive(8rem,1.5rem);
+  @include media-breakpoint-up(xs) {
+    @include nameResponsive(5rem,1.4rem)
+  }
+  @include media-breakpoint-up(lg) {
+    @include nameResponsive(7rem, 1.8rem)
+  }
+  @include media-breakpoint-up(lg) {
+    @include nameResponsive(7rem, 1.8rem)
+  }
   @include media-breakpoint-up(xl) {
-    top: 14rem;
-    font-size: 2rem;
-    line-height: 1.9rem;
+    @include nameResponsive(10rem, 2.5rem)
   }
 }
