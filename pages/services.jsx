@@ -7,10 +7,25 @@ import fetch from "isomorphic-unfetch";
 import "../client/scss/app.scss";
 import "../client/scss/custom/layout/fadeIn.scss";
 
+// require("dotenv").config();
+// let url;
+// if (process.env.NODE_ENV === "development") {
+//   url = process.env.NODE_LOCAL;
+// }
+// if (process.env.NODE_ENV === "production") {
+//   url = process.env.NODE_LIVEURL;
+// }
+
+/* DEV */
+// let url = "http://localhost:3000"
+
+/* PRODUCTION */
+let url = "https://morgan-ashley-salon.herokuapp.com"
+
 Services.getInitialProps = async ({ req }) => {
-  const servicesRes = await fetch("http://localhost:3000/api/services");
+  const servicesRes = await fetch(url + "/api/services");
   const servicesJson = await servicesRes.json();
-  const bridalsRes = await fetch("http://localhost:3000/api/bridals");
+  const bridalsRes = await fetch(url + "/api/bridals");
   const bridalsJson = await bridalsRes.json();
   return { req: { servicesJson, bridalsJson } };
 };
@@ -65,7 +80,9 @@ function Services({ req }) {
             ENJOY AN UNFORGETTABLE SALON EXPERIENCE
           </h5>
           <button className="btn bookButton my-4">
-            <a href="/contact" style={{textDecoration:'none !important'}}>BOOK AN APPOINTMENT</a>
+            <a href="/contact" style={{ textDecoration: "none !important" }}>
+              BOOK AN APPOINTMENT
+            </a>
           </button>
         </div>
       </section>

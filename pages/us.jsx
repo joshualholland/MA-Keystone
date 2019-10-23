@@ -9,12 +9,28 @@ import dateParser from "../customModules/dateParser";
 import Footer from "../client/components/Footer";
 import "../client/scss/custom/layout/fadeIn.scss";
 
+// require("dotenv").config();
+// let url;
+// if (process.env.NODE_ENV === "development") {
+//   url = process.env.NODE_LOCAL;
+// }
+// if (process.env.NODE_ENV === "production") {
+//   url = process.env.NODE_LIVEURL;
+// }
+
+/* DEV */
+// let url = "http://localhost:3000"
+
+/* PRODUCTION */
+let url = "https://morgan-ashley-salon.herokuapp.com";
+
+
 Us.getInitialProps = async ({ req }) => {
-  const stylistRes = await fetch("http://localhost:3000/api/stylists");
+  const stylistRes = await fetch(url + "/api/stylists");
   const stylistsJson = await stylistRes.json();
-  const teamRes = await fetch("http://localhost:3000/api/team");
+  const teamRes = await fetch(url + "/api/team");
   const teamJson = await teamRes.json();
-  const ownersRes = await fetch("http://localhost:3000/api/owners");
+  const ownersRes = await fetch(url + "/api/owners");
   const ownersJson = await ownersRes.json();
   return { req: { stylistsJson, teamJson, ownersJson } };
 };

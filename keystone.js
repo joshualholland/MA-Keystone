@@ -4,11 +4,15 @@ require('dotenv').config();
 
 // Next app
 const next = require('next');
-const dev = process.env.NODE_ENV !== 'production';
+let app;
+const dev = process.env.NODE_ENV === 'development';
+const prod = process.env.NODE_ENV === 'production';
 // This env variable is set by heroku automatically. Also 
 // If you don't set mongo in keystone.init it just makes one automatically so...
 const url = process.env.MONGODB_URI || 'mongodb://localhost:27017/MA_Salon';
-const app = next({ dev });
+
+if(dev) app = next({ dev });
+if(prod) app = next({ prod });
 
 // Set up our keystone instance
 keystone.init({
