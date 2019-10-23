@@ -4,7 +4,7 @@
   "description": "Keystone experiment for MA",
   "main": "index.js",
   "scripts": {
-    "dev": "node keystone.js"
+    "start" : "node keystone.js"
   },
   "author": "Joshua Holland",
   "license": "ISC",
