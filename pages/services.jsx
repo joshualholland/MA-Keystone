@@ -33,8 +33,7 @@ Services.getInitialProps = async ({ req }) => {
 function Services({ req }) {
   const services = req.servicesJson.services;
   const bridals = req.bridalsJson.bridals;
-  console.log(services);
-  console.log(bridals);
+  // console.log(services);
 
   return (
     <>

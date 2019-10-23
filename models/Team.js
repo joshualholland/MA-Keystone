@@ -28,7 +28,7 @@ var largeImgStorage = new keystone.Storage({
         generateFilename: function (file, index) {
             return file.originalname;
         },
-        whenExists: 'error',
+        whenExists: 'overwrite',
         // path where files will be served
         publicPath: './public/team',
     },
