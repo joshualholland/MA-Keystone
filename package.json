@@ -4,9 +4,11 @@
   "description": "Keystone experiment for MA",
   "main": "index.js",
   "scripts": {
-    "start" : "node keystone.js"
+    "build" : "next build",
+    "dev" : "node keystone.js",
+    "start" : "NODE_ENV=production node keystone.js"
   },
-  "author": "Joshua Holland",
+  "author": "Nitish Chauhan, Joshua Holland",
   "license": "ISC",
   "dependencies": {
     "@zeit/next-css": "^1.0.1",

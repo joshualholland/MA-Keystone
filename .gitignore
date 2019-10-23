@@ -2,7 +2,6 @@ node_modules
 updates
 .vscode/
 .next/
-.env
 .prettierignore
 keys.json
 public/stylists/
