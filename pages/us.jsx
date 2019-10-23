@@ -27,7 +27,6 @@ function Us({ req }) {
   const teamList = req.teamJson.team;
   const ownersList = req.ownersJson.owners;
 
-  console.log(req.teamJson);
 
   function createPeopleBubbles(peopleList, path) {
     const people = peopleList;
@@ -74,14 +73,12 @@ function Us({ req }) {
     const inactiveList = jquery("#" + inactiveListId);
     inactiveButton.removeClass("active");
     inactiveList.removeClass("active");
-    // inactiveList.css('display','none');
 
     const activeButton = jquery(e.target);
     const activeListId = activeButton.attr("id").replace("Button", "List");
     const activeList = jquery("#" + activeListId);
     activeButton.addClass("active");
     activeList.addClass("active");
-    // activeList.css('display','flex');
   }
 
   return (

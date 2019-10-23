@@ -6,7 +6,7 @@ export default function PersonalModal(name, startDate, image, about,key) {
       <div
         className="modal fade"
         id={key}
-        tabindex="-1"
+        tabIndex="-1"
         role="dialog"
         aria-labelledby="exampleModalLabelz"
         aria-hidden="true"

@@ -1,5 +1,4 @@
 import React from "react";
-import "font-awesome/css/font-awesome.min.css";
 import CallUs from "./CallUs";
 import Email from "./Email";
 import Address from "./Address";

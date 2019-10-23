@@ -8,30 +8,36 @@ export default function ProductTable(props) {
 
   function EmptyTable() {
     return (
-      <tr className="productRow">
-        <td className="productName" style={{color:'red'}}>
-          You need to add content using the portal located @ www.morganashleysalon.com/keystone
-          
-        </td>
-        <td className="productPrice" style={{color:'red'}}>NEEDS CONTENT ADDED THROUGH KEYSTONE!</td>
-      </tr>
+      <tbody>
+        <tr className="productRow">
+          <td className="productName" style={{ color: "red" }}>
+            You need to add content using the portal located @
+            www.morganashleysalon.com/keystone
+          </td>
+          <td className="productPrice" style={{ color: "red" }}>
+            NEEDS CONTENT ADDED THROUGH KEYSTONE!
+          </td>
+        </tr>
+      </tbody>
     );
   }
 
   return (
     <table className="productTable">
-      {products.length > 0 ? (
-        products.map(product => {
-          return (
-            <tr className="productRow">
-              <td className="productName">{product.service}</td>
-              <td className="productPrice">{product.price}</td>
-            </tr>
-          );
-        })
-      ) : (
-        <EmptyTable />
-      )}
+      <tbody>
+        {products.length > 0 ? (
+          products.map((product, index) => {
+            return (
+              <tr key={index} className="productRow">
+                <td className="productName">{product.service}</td>
+                <td className="productPrice">{product.price}</td>
+              </tr>
+            );
+          })
+        ) : (
+          <EmptyTable />
+        )}
+      </tbody>
     </table>
   );
 }

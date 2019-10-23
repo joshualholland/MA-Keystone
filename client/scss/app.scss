@@ -1,30 +1,34 @@
-@import './mixins.scss';
+@import "./mixins.scss";
 
-@import './imported/bootstrap-scss/bootstrap.scss';
-@import './imported/fonts.scss';
+@import "./imported/bootstrap-scss/bootstrap.scss";
+@import "./imported/fonts.scss";
 
-@import './custom/layout/navbar.scss';
-@import './custom/layout/banner.scss';
-@import './custom/layout/footer.scss';
-@import './custom/home/bannerCarousel.scss';
-@import './custom/home/reviewsCarousel.scss';
-@import './custom/home/home.scss';
-@import './custom/us/us.scss';
-@import './custom/us/modal.scss';
-@import './custom/services/services.scss';
-@import './custom/services/productTable.scss';
-@import './custom/layout/form.scss';
-@import './custom/layout/confirmMessage.scss';
-@import './custom/careers/careers.scss';
+@import "./custom/layout/navbar.scss";
+@import "./custom/layout/banner.scss";
+@import "./custom/layout/footer.scss";
+@import "./custom/home/bannerCarousel.scss";
+@import "./custom/home/reviewsCarousel.scss";
+@import "./custom/home/home.scss";
+@import "./custom/us/us.scss";
+@import "./custom/us/modal.scss";
+@import "./custom/services/services.scss";
+@import "./custom/services/productTable.scss";
+@import "./custom/layout/form.scss";
+@import "./custom/layout/confirmMessage.scss";
+@import "./custom/careers/careers.scss";
 
+body {
+  color: #111;
+  font-size: 14px;
+  font-family: "Open Sans", arial, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
 
-  body {
-    color: #111;
-    font-size: 14px;
-    font-family: "Open Sans", arial, sans-serif;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
+a {
+  outline: none;
+  color:inherit;
+}
 
 .font-alt {
   @include font-alt;
@@ -43,11 +47,9 @@
   object-fit: contain;
 }
 
-.bg-scroll{
-	background-attachment: scroll !important;
+.bg-scroll {
+  background-attachment: scroll !important;
 }
 
-.slimContainer{
-
-  
+.slimContainer {
 }

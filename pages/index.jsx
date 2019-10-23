@@ -5,7 +5,6 @@ import ReviewsCarousel from "../client/components/ReviewsCarousel";
 import Footer from "../client/components/Footer";
 import Loader from "react-loader";
 import { Link, animateScroll as scroll } from "react-scroll";
-import jquery from "jquery";
 import anime from "animejs";
 import "../client/scss/app.scss";
 
@@ -25,7 +24,7 @@ export default class Home extends Component {
     await anime({
       targets: "body",
       opacity: [0, 1],
-      duration: 7000
+      duration: 3000
     });
     await this.setState({
       isLoading: false
@@ -34,6 +33,7 @@ export default class Home extends Component {
 
   componentDidMount() {
     window.addEventListener("resize", this.updateWindowDimensions);
+
     this.wait();
   }
 
@@ -140,11 +140,14 @@ export default class Home extends Component {
           <ReviewsCarousel />
         </section>
         <section className="row no-gutters followContainer">
-          <div className="col-12">
-            <p className="followText">Follow</p>
-            <img id="mamaDark" src="/images/landing/mamarque_dark.svg"></img>
-            <p className="followText">On Instagram</p>
-          </div>
+          <a className="d-block w-100 h-100"
+          href="https://www.instagram.com/accounts/login/?next=%2Fmorganashleysalon%2F&source=follow">
+            <div className="col-12">
+              <p className="followText">Follow</p>
+              <img id="mamaDark" src="/images/landing/mamarque_dark.svg"></img>
+              <p className="followText">On Instagram</p>
+            </div>
+          </a>
         </section>
         <Footer />
       </>
