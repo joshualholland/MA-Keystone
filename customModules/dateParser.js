@@ -2,6 +2,10 @@ export default function dateParser(dateString) {
   dateString = dateString.split("-");
   let year = dateString[0];
   let month = dateString[1];
+  if (month !== "10") {
+    month.toString().replace("0", "");
+  }
+  month = month - 1;
   let m = [];
   m[0] = "January";
   m[1] = "February";
