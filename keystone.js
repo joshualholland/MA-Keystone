@@ -5,6 +5,9 @@ require('dotenv').config();
 // Next app
 const next = require('next');
 const dev = process.env.NODE_ENV !== 'production';
+// This env variable is set by heroku automatically. Also 
+// If you don't set mongo in keystone.init it just makes one automatically so...
+const url = process.env.MONGODB_URI || 'mongodb://localhost:27017/MA_Salon';
 const app = next({ dev });
 
 // Set up our keystone instance
@@ -14,7 +17,7 @@ keystone.init({
   'static':['public'],
   'auto update': true,
   // The url for your MongoDB connection
-  'mongo': 'mongodb://localhost:27017/MA_Salon',
+  // 'mongo': url,
   // Whether to enable built-in authentication for Keystone's Admin UI,
   'auth': true,
   // The key of the Keystone List for users, required if auth is set to true
