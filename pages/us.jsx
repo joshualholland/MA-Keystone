@@ -19,10 +19,10 @@ import "../client/scss/custom/layout/fadeIn.scss";
 // }
 
 /* DEV */
-// let url = "http://localhost:3000"
+let url = "http://localhost:3000"
 
 /* PRODUCTION */
-let url = "https://morgan-ashley-salon.herokuapp.com";
+// let url = "https://morgan-ashley-salon.herokuapp.com";
 
 
 Us.getInitialProps = async ({ req }) => {
@@ -43,7 +43,6 @@ function Us({ req }) {
   const teamList = req.teamJson.team;
   const ownersList = req.ownersJson.owners;
 
-
   function createPeopleBubbles(peopleList, path) {
     const people = peopleList;
     if (people.length == 0) {
@@ -58,8 +57,8 @@ function Us({ req }) {
     for (let i = 0; i < people.length; i++) {
       let name = people[i].name;
       let start_date = dateParser(people[i].start_date);
-      let smallImage = path + people[i].small_image.filename;
-      let largeImage = path + people[i].large_image.filename;
+      let smallImage = people[i].small_image.url;
+      let largeImage = people[i].large_image.url;
       let about = people[i].about;
       let key = name.first + Math.floor(Math.random() * Math.floor(10000));
 

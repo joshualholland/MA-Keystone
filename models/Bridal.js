@@ -8,7 +8,7 @@ var Bridal = new keystone.List("Bridal", {
 
 Bridal.add({
   title: {type:String, required:true},
-  state: {type: Types.Select, options: 'draft,published',default:'draft'},
+  // state: {type: Types.Select, options: 'draft,published',default:'draft'},
   service: {type:String},
   price: {type:String}
 });

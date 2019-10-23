@@ -1,4 +1,5 @@
 const keystone = require('keystone');
+const keyRing = require('./keys.json');
 // Get env from .env
 require('dotenv').config();
 
@@ -24,6 +25,8 @@ keystone.init({
   // 'mongo': url,
   // Whether to enable built-in authentication for Keystone's Admin UI,
   'auth': true,
+  // Cloudinary Config
+  'cloudinary config': 'cloudinary://219567243374754:iT4tkXVpJeXujq_-n1HX0SbTDBI@db4axno6t',
   // The key of the Keystone List for users, required if auth is set to true
   'user model': 'User',
   // The encryption key to use for your cookies.

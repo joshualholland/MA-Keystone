@@ -8,7 +8,7 @@ var Services = new keystone.List("Services", {
 
 Services.add({
   title: {type:String, required:true},
-  state: {type: Types.Select, options: 'draft,published',default:'draft'},
+  // state: {type: Types.Select, options: 'draft,published',default:'draft'},
   service: {type:String},
   price: {type:String}
 });
