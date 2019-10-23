@@ -121,7 +121,7 @@ $containerUnitWidth: $margin * 2 + $unitSize;
     @include resize(18rem);
   }
   @include media-breakpoint-up(xl) {
-    @include resize(23rem);
+    @include resize(17rem);
   }
 }
 
@@ -151,11 +151,11 @@ $containerUnitWidth: $margin * 2 + $unitSize;
   display: inline-block;
   position: relative;
   width: 100%;
-  bottom: 8rem;
+  bottom: 7rem;
   text-align: center;
   color: white;
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 0.8rem;
+  font-weight: 350;
   line-height: 1.4rem;
   opacity: 0.9;
   -webkit-font-smoothing: antialiased;

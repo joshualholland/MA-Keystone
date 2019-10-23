@@ -17,7 +17,6 @@ const sendEmail = (to, from, subject, text) => {
 };
 
 const mailgunCareers = async (req, res, next) => {
-  // res.send('What the fk')
   const name = req.body.name;
   const email = req.body.email;
   const desiredPosition = req.body.desiredPosition;

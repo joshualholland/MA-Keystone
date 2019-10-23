@@ -5,10 +5,12 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
+          <title>Morgan Ashley Salon</title>
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
+          <link rel="shortcut icon" href="/images/favicon.png" />
           {/* BootStrap is imported as scss to give access to mixins */}
           <link
             href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
