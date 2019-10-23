@@ -18,8 +18,10 @@ module.exports = nextApp => keystoneApp => {
 
   keystoneApp.use(bodyParser.json());
 
-  keystoneApp.get("/admin",middleware.requireUser, middleware.adminView);
-
+  // keystoneApp.get("/admin",middleware.requireUser, middleware.adminView);
+  keystoneApp.get("/admin",function(req,res){
+    res.redirect("/keystone");
+  })
 
   // Gets Bridal data
   keystoneApp.get(
