@@ -56,7 +56,7 @@ export default class Home extends Component {
             <img id="malogo" src="/images/landing/malogo.svg" />
             <img id="addressHeader" src="/images/landing/WORKPLZ.svg" />
             <Link
-              to="culture"
+              to="firstSection"
               className="scroll-down"
               smooth={true}
               offset={-90}
@@ -69,7 +69,7 @@ export default class Home extends Component {
             </Link>
           </div>
         </div>
-        <section className="row overflow-hidden no-gutters ">
+        <section className="row overflow-hidden no-gutters " id="firstSection">
           <div className="col-12 col-xl-6">
             <img className="w-100" src="/images/landing/landing1.jpg"></img>
           </div>
@@ -140,8 +140,10 @@ export default class Home extends Component {
           <ReviewsCarousel />
         </section>
         <section className="row no-gutters followContainer">
-          <a className="d-block w-100 h-100"
-          href="https://www.instagram.com/accounts/login/?next=%2Fmorganashleysalon%2F&source=follow">
+          <a
+            className="d-block w-100 h-100"
+            href="https://www.instagram.com/accounts/login/?next=%2Fmorganashleysalon%2F&source=follow"
+          >
             <div className="col-12">
               <p className="followText">Follow</p>
               <img id="mamaDark" src="/images/landing/mamarque_dark.svg"></img>
