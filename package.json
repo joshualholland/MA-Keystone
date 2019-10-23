@@ -6,7 +6,7 @@
   "scripts": {
     "build" : "next build",
     "dev" : "node keystone.js",
-    "start" : "NODE_ENV=production node keystone.js"
+    "start" : "next build && node keystone.js"
   },
   "author": "Nitish Chauhan, Joshua Holland",
   "license": "ISC",

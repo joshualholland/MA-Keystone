@@ -1,6 +1,7 @@
 echo 'Deploying to production repo'
+rm -rf ~/vs-workspace/morganAshleyDeploy/.gitignore
+rm -rf ~/vs-workspace/morganAshleyDeploy/.env
 rm -rf ~/vs-workspace/morganAshleyDeploy/*
-rm -rf ~/vs-workspace/morganAshleyDeploy/.*
 cp -avr client ../morganAshleyDeploy/client
 cp -avr customModules ../morganAshleyDeploy/customModules
 cp -avr models ../morganAshleyDeploy/models
@@ -13,4 +14,4 @@ cp -av .env ../morganAshleyDeploy/.env
 cp -av keystone.js ../morganAshleyDeploy/keystone.js
 cp -av next.config.js ../morganAshleyDeploy/next.config.js
 cp -av package.json ../morganAshleyDeploy/package.json
-printf "node_modules\npackage-lock.json\npublic/stylists/\npublic/team/\n" >> ../morganAshleyDeploy/.gitignore
+printf "node_modules\npackage-lock.json\n.next\npublic/stylists/\npublic/team/\n" >> ../morganAshleyDeploy/.gitignore
