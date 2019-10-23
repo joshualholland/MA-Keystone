@@ -68,7 +68,7 @@ export default function Footer() {
             </div>
           </div>
           <p className="creditInfo">
-            Made with love by Morgan, Daniel, Josh and Nitish
+            Made by Josh and Nitish
           </p>
         </section>
       </footer>
