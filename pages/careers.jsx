@@ -16,6 +16,7 @@ export default class Careers extends Component {
       name: "",
       email: "",
       desiredPosition: "",
+      desiredHours: "",
       message: ""
     };
   }
@@ -82,8 +83,8 @@ export default class Careers extends Component {
                     }}
                     required
                   />
-                  <input
-                    type="text"
+                  <select
+                    type="select"
                     className="form-control"
                     id="positionForm"
                     placeholder="Desired Position"
@@ -91,14 +92,48 @@ export default class Careers extends Component {
                       this.setState({ desiredPosition: e.target.value });
                     }}
                     required
-                  />
+                  >
+                    <option value="" disabled selected>Select Desired Position</option>
+                    <option>Receptionist</option>
+                    <option>Management</option>
+                    <option>Shampoo Technician</option>
+                    <option>Associate Stylist</option>
+                    <option>Stylist</option>
+                  </select>
+                  <select
+                    type="select"
+                    className="form-control"
+                    id="hoursForm"
+                    placeholder="Desired Hours"
+                    onChange={e => {
+                      this.setState({ desiredHours: e.target.value });
+                    }}
+                    required
+                  >
+                    <option value="" disabled selected>Select Desired Hours</option>
+                    <option>Full-Time</option>
+                    <option>Part-Time</option>
+                    <option>Whatever is Available!</option>
+                  </select>
                 </div>
                 <div className="col-12 col-lg-6" id="messageContainer">
                   <textarea
                     type="name"
                     className="form-control"
+                    rows="4"
                     id="messageForm"
-                    placeholder="Message"
+                    placeholder="Tell us a little bit about yourself. We love fun facts!"
+                    onChange={e => {
+                      this.setState({ message: e.target.value });
+                    }}
+                    required
+                  />
+                  <textarea
+                    type="name"
+                    className="form-control"
+                    rows="4"
+                    id="messageForm"
+                    placeholder="Tell us your reason for choosing Morgan Ashley!"
                     onChange={e => {
                       this.setState({ message: e.target.value });
                     }}

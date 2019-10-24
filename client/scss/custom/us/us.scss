@@ -163,20 +163,20 @@ $containerUnitWidth: $margin * 2 + $unitSize;
   @mixin nameResponsive($bottom, $fontSize) {
     bottom: $bottom;
     font-size: $fontSize;
-    line-height: $fontSize*0.95;
+    line-height: $fontSize * 0.95;
   }
 
-  @include nameResponsive(8rem,1.5rem);
+  @include nameResponsive(8rem, 1.5rem);
   @include media-breakpoint-up(xs) {
-    @include nameResponsive(5rem,1.4rem)
+    @include nameResponsive(5rem, 1.4rem);
   }
   @include media-breakpoint-up(lg) {
-    @include nameResponsive(7rem, 1.8rem)
+    @include nameResponsive(7rem, 1.8rem);
   }
   @include media-breakpoint-up(lg) {
-    @include nameResponsive(7rem, 1.8rem)
+    @include nameResponsive(7rem, 1.8rem);
   }
   @include media-breakpoint-up(xl) {
-    @include nameResponsive(10rem, 2.5rem)
+    @include nameResponsive(8rem, 2.5rem);
   }
 }

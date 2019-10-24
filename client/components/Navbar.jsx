@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import $ from "jquery";
+import jquery from "jquery";
 
 const Navbar = () => {
   // Turns the dropdown menu on and off with display:block/none
@@ -52,9 +52,28 @@ const Navbar = () => {
     menuToggle.className = "animated navBarMinimize";
   }
 
+  /* This fixes a bug made by my custom navbar. The navbar style sheets
+     have media queries that control the display: {none/block} of the navi-nav container
+     On resize, this causes the display property to be in the wrong state when toggled
+     by the stylesheets media queries. A possible fix is to create a separate identical
+     navi-nav container but this fix might actually be less cumbersome */
+  function showDesktopLinksAfterMobileResize() {
+    if (window.innerWidth < 1200) {
+      $("#navi-nav").css({ display: "none" });
+    } else {
+      $("#navi-nav").css({ display: "block" });
+    }
+  }
+
   // Component Did Mount
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", showDesktopLinksAfterMobileResize);
+    // Component Will Unmount
+    return () => {
+      window.removeEventListener("scroll")
+      window.removeEventListener("resize")
+    }
   }, []);
 
   return (
@@ -101,7 +120,7 @@ const Navbar = () => {
                 205-995-2480
               </a>
             </li>
-            <li className='mr-2'>
+            <li className="sm-icon-item">
               <a
                 className="navi-link animated sm_icons"
                 href="https://www.facebook.com/Morgan-Ashley-Studio-Salon-1831296120421943/"
@@ -115,7 +134,7 @@ const Navbar = () => {
                 </span>
               </a>
             </li>
-            <li className='mr-2'>
+            <li className="sm-icon-item">
               <a
                 className="navi-link animated sm_icons"
                 href="https://www.instagram.com/morganashleysalon/"
@@ -125,7 +144,7 @@ const Navbar = () => {
                 </span>
               </a>
             </li>
-            <li className='mr-2'>
+            <li className="sm-icon-item">
               <a
                 className="navi-link animated sm_icons"
                 href="https://www.pinterest.com/morgansalon"

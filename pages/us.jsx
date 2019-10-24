@@ -25,7 +25,6 @@ import "../client/scss/custom/layout/fadeIn.scss";
 /* PRODUCTION */
 let url = "https://morgan-ashley-salon.herokuapp.com";
 
-
 Us.getInitialProps = async ({ req }) => {
   const stylistRes = await fetch(url + "/api/stylists");
   const stylistsJson = await stylistRes.json();
@@ -75,7 +74,9 @@ function Us({ req }) {
               <img src={smallImage} className="flex-image" />
             </div>
           </a>
-          <span className="flex-name">{name}</span>
+          <a data-toggle="modal" data-target={"#" + key}>
+            <span className="flex-name">{name}</span>
+          </a>
           {PersonalModal(name, start_date, largeImage, about, key)}
         </li>
       );
@@ -149,7 +150,7 @@ function Us({ req }) {
           {createPeopleBubbles(ownersList, ownersPath)}
         </ul>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }
