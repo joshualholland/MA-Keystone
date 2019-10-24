@@ -15,3 +15,7 @@ cp -av keystone.js ../morganAshleyDeploy/keystone.js
 cp -av next.config.js ../morganAshleyDeploy/next.config.js
 cp -av package.json ../morganAshleyDeploy/package.json
 printf "node_modules\npackage-lock.json\n.next\npublic/stylists/\npublic/team/\n" >> ../morganAshleyDeploy/.gitignore
+cd ../morganAshleyDeploy
+git add *
+git commit -m 'lol'
+git push

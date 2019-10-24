@@ -93,7 +93,7 @@ export default class Careers extends Component {
                     }}
                     required
                   >
-                    <option value="" disabled selected>Select Desired Position</option>
+                    <option defaultValue="" disabled selected>Select Desired Position</option>
                     <option>Receptionist</option>
                     <option>Management</option>
                     <option>Shampoo Technician</option>
@@ -110,7 +110,7 @@ export default class Careers extends Component {
                     }}
                     required
                   >
-                    <option value="" disabled selected>Select Desired Hours</option>
+                    <option defaultValue="" disabled selected>Select Desired Hours</option>
                     <option>Full-Time</option>
                     <option>Part-Time</option>
                     <option>Whatever is Available!</option>

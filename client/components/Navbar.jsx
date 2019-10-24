@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import jquery from "jquery";
+import $ from "jquery";
 
 const Navbar = () => {
   // Turns the dropdown menu on and off with display:block/none
