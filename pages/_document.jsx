@@ -10,6 +10,10 @@ export default class MyDocument extends Document {
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
+          <meta
+            name="description"
+            content="Morgan Ashley Salon, best salon birmingham alabama for customer service and a quality hair cut, color, balayage, highlights"
+            />
           <link rel="shortcut icon" href="/images/favicon.png" />
           {/* BootStrap is imported as scss to give access to mixins */}
           <link
