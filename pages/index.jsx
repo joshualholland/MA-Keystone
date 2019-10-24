@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Head from 'next/head';
 import Navbar from "../client/components/Navbar";
 import BannerCarousel from "../client/components/BannerCarousel";
 import ReviewsCarousel from "../client/components/ReviewsCarousel";
@@ -49,6 +50,9 @@ export default class Home extends Component {
     if (this.state.isLoading) return <Loader />;
     return (
       <>
+      <Head>
+        <title>Morgan Ashley Salon</title>
+      </Head>
         <div className="page" id="top">
           <Navbar />
           <div className="imageContainer bg-dark relative">

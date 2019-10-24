@@ -5,14 +5,13 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>Morgan Ashley Salon</title>
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
           <meta
             name="description"
-            content="Morgan Ashley Salon, best salon birmingham alabama for customer service and a quality hair cut, color, balayage, highlights"
+            content="Morgan Ashley Salon, best salon birmingham alabama for customer service and a quality hair cut, color, balayage, highlights, cahaba valley, careers, us, stylists, team"
             />
           <link rel="shortcut icon" href="/images/favicon.png" />
           {/* BootStrap is imported as scss to give access to mixins */}

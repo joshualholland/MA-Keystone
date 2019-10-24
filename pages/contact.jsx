@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Head from 'next/head';
 import Navbar from "../client/components/Navbar";
 import Banner from "../client/components/Banner";
 import "../client/scss/app.scss";
@@ -43,6 +44,9 @@ export default class Contact extends Component {
   render() {
     return (
       <>
+        <Head>
+          <title>Morgan Ashley Salon | Contact</title>
+        </Head>
         <Navbar />
         <Banner
           bannerImage={"/images/contact/banner.jpg"}

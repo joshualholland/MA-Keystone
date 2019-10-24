@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Head from 'next/head';
 import Navbar from "../client/components/Navbar";
 import Banner from "../client/components/Banner";
 import ProductTable from "../client/components/ProductTable";
@@ -37,6 +38,9 @@ function Services({ req }) {
 
   return (
     <>
+    <Head>
+      <title>Morgan Ashley Salon | Services</title>
+    </Head>
       <Navbar />
       <Banner
         bannerImage={"/images/services/S1.jpg"}

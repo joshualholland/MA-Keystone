@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Head from 'next/head';
 import Navbar from "../client/components/Navbar";
 import Banner from "../client/components/Banner";
 import PersonalModal from "../client/components/PersonalModal";
@@ -98,6 +99,9 @@ function Us({ req }) {
 
   return (
     <>
+      <Head>
+        <title>Morgan Ashley Salon | US</title>
+      </Head>
       <Navbar />
       <Banner
         bannerImage={"/images/us/banner.jpg"}

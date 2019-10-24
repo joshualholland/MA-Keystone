@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Head from 'next/head';
 import Banner from "../client/components/Banner";
 import Navbar from "../client/components/Navbar";
 import Footer from "../client/components/Footer";
@@ -29,7 +30,7 @@ export default class Careers extends Component {
           "Content-type": "application/json"
         },
         body: JSON.stringify(this.state)
-      }).then((response)=>{
+      }).then((response) => {
         $(".maSubmit").toggle();
         $("#confirmMessage").addClass("active");
       });
@@ -41,6 +42,9 @@ export default class Careers extends Component {
   render() {
     return (
       <>
+        <Head>
+          <title>Morgan Ashley Salon | Careers</title>
+        </Head>
         <Navbar />
         <Banner
           bannerImage="/images/careers/banner.jpg"
