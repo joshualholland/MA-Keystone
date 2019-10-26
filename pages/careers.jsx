@@ -17,8 +17,16 @@ export default class Careers extends Component {
       email: "",
       desiredPosition: "",
       desiredHours: "",
-      message: ""
+      resume: "",
+      message: "",
+      reason: "",
+      crayon: ""
     };
+  }
+
+  handleFileChange = async e => {
+    e.preventDefault();
+    this.setState({"fileName": this.fileInput.current.files[0].name})
   }
 
   handleSubmit = async e => {
@@ -115,6 +123,15 @@ export default class Careers extends Component {
                     <option>Part-Time</option>
                     <option>Whatever is Available!</option>
                   </select>
+                  <input
+                  type="file"
+                  className="form-control"
+                  id="resumeForm"
+                  placeholder="Upload resume if you have one!"
+                  ref={this.fileInput}
+                  onChange={e => {
+                    this.setState({ resume: e.target.value });
+                  }} />
                 </div>
                 <div className="col-12 col-lg-6" id="messageContainer">
                   <textarea
@@ -132,10 +149,22 @@ export default class Careers extends Component {
                     type="name"
                     className="form-control"
                     rows="4"
-                    id="messageForm"
+                    id="reasonForm"
                     placeholder="Tell us your reason for choosing Morgan Ashley!"
                     onChange={e => {
-                      this.setState({ message: e.target.value });
+                      this.setState({ reason: e.target.value });
+                    }}
+                    required
+                  />
+                  <textarea
+                    type="name"
+                    className="form-control"
+                    rows="4"
+                    id="crayonForm"
+                    placeholder="Okay... enough with the serious questions. Here's a fun one! 
+                    You're a new addition to the crayon box. What color would you be &amp; why? "
+                    onChange={e => {
+                      this.setState({ crayon: e.target.value });
                     }}
                     required
                   />
