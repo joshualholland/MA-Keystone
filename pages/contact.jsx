@@ -100,6 +100,7 @@ export default class Contact extends Component {
                   className="form-control mt-2 mt-xl-0"
                   id="messageForm"
                   placeholder="MESSAGE"
+                  rows={4}
                   onChange={e => {
                     this.setState({ message: e.target.value });
                   }}

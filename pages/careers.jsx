@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Head from 'next/head';
+import NumberFormat from 'react-number-format';
 import Banner from "../client/components/Banner";
 import Navbar from "../client/components/Navbar";
 import Footer from "../client/components/Footer";
@@ -15,6 +16,7 @@ export default class Careers extends Component {
     this.state = {
       name: "",
       email: "",
+      phone: "",
       desiredPosition: "",
       desiredHours: "",
       resume: "",
@@ -90,6 +92,18 @@ export default class Careers extends Component {
                       this.setState({ email: e.target.value });
                     }}
                     required
+                  />
+                  <NumberFormat
+                        format="+1 (###) ###-####"
+                        mask="_"
+                        type="tel"
+                        name="phone"
+                        id="phoneForm"
+                        className="form-control"
+                        placeholder="Phone Number"
+                        onChange={e => {
+                          this.setState({ phone: e.target.value })
+                        }}
                   />
                   <select
                     type="select"

@@ -29,6 +29,7 @@
     "mailgun-js": "^0.22.0",
     "next": "^9.0.8",
     "next-images": "^1.2.0",
+    "node-sass": "^4.12.0",
     "nodemon": "^1.19.3",
     "npm-run-all": "^4.1.5",
     "react": "^16.10.1",
@@ -36,14 +37,14 @@
     "react-google-maps": "^9.4.5",
     "react-loader": "^2.4.5",
     "react-multi-carousel": "^2.2.10",
+    "react-number-format": "^4.3.1",
     "react-router-dom": "^5.1.2",
     "react-scroll": "^1.7.14",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
     "underscore": "^1.9.1",
     "url-loader": "^2.2.0",
-    "webpack": "^4.41.0",
-    "node-sass": "^4.12.0"
+    "webpack": "^4.41.0"
   },
   "nodemonConfig": {
     "delay": "1000"
