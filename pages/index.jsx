@@ -60,7 +60,7 @@ export default class Home extends Component {
             <img id="malogo" src="/images/landing/malogo.svg" />
             <img id="addressHeader" src="/images/landing/WORKPLZ.svg" />
             <Link
-              to="firstSection"
+              to="culture"
               className="scroll-down"
               smooth={true}
               offset={-90}

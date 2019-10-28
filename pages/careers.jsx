@@ -99,8 +99,8 @@ export default class Careers extends Component {
                         type="tel"
                         name="phone"
                         id="phoneForm"
+                        placeholder="Phone"
                         className="form-control"
-                        placeholder="Phone Number"
                         onChange={e => {
                           this.setState({ phone: e.target.value })
                         }}
