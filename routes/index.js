@@ -2,8 +2,6 @@ const keystone = require("keystone");
 // Import our API routes with keystone importer
 var importRoutes = keystone.importer(__dirname);
 const bodyParser = require("body-parser");
-var mailgunLoader = require("mailgun-js");
-const keyRing = require("../keys.json");
 const middleware = require('./middleware.js');
 
 

@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
+import config from '../../config';
 import {
   GoogleMap,
   withScriptjs,
   withGoogleMap,
   Marker
 } from "react-google-maps";
-var keyRing = require("../../keys.json");
 import '../scss/custom/layout/maps.scss';
 
 const GoogleJSMap = React.memo(() =>{
-  const apiKey = keyRing.Google.apiKey;
+  const apiKey = config.Google.apiKey;
   //const apiKey= '' // KEEP LIKE THIS UNTIL YOU PUT LIVE TO PREVENT TOO MANY REQUESTS
 
   function Map() {

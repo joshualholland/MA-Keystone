@@ -1,9 +1,9 @@
 const mailgunLoader = require("mailgun-js");
-const keyRing = require("../keys.json");
+const config = require('../config');
 
 let mailgun = mailgunLoader({
-  apiKey: keyRing.MailGun.apiKey,
-  domain: keyRing.MailGun.apiDomain
+  apiKey: config.MailGun.apiKey,
+  domain: config.MailGun.apiDomain
 });
 
 const sendEmail = (to, from, subject, text) => {

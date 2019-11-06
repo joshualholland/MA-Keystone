@@ -1,5 +1,5 @@
 const keystone = require('keystone');
-const keyRing = require('./keys.json');
+const keyRing = require('./keys.js/index.js');
 // Get env from .env
 require('dotenv').config();
 
