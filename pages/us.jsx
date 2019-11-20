@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Head from 'next/head';
+import Head from "next/head";
 import Navbar from "../client/components/Navbar";
 import Banner from "../client/components/Banner";
 import PersonalModal from "../client/components/PersonalModal";
@@ -20,10 +20,10 @@ import "../client/scss/custom/layout/fadeIn.scss";
 // }
 
 /* DEV */
-// let url = "http://localhost:3000"
+let url = "http://localhost:3000";
 
 /* PRODUCTION */
-let url = "https://morgan-ashley-salon.herokuapp.com";
+// let url = "https://morgan-ashley-salon.herokuapp.com";
 
 Us.getInitialProps = async ({ req }) => {
   const stylistRes = await fetch(url + "/api/stylists");
@@ -53,14 +53,22 @@ function Us({ req }) {
         </h1>
       );
     }
+
+
     const items = [];
     for (let i = 0; i < people.length; i++) {
       let name = people[i].name;
       let start_date = dateParser(people[i].start_date);
-      let smallImage = people[i].small_image.url;
-      let largeImage = people[i].large_image.url;
+      let smallImage = has(people[i], "small_image.url") // prevents undefined error
+        ? people[i].small_image.url
+        : "/images/misc/error.jpg";
+      let largeImage = has(people[i], "large_image.url") // prevents undefined error
+        ? people[i].large_image.url
+        : "/images/misc/error.jpg";
       let about = people[i].about;
       let key = name.first + Math.floor(Math.random() * Math.floor(10000));
+      let services = people[i].services;
+      let prices = people[i].prices;
 
       name = name.first + " " + name.last;
       items.push(
@@ -77,7 +85,15 @@ function Us({ req }) {
           <a data-toggle="modal" data-target={"#" + key}>
             <span className="flex-name">{name}</span>
           </a>
-          {PersonalModal(name, start_date, largeImage, about, key)}
+          {PersonalModal(
+            name,
+            start_date,
+            largeImage,
+            about,
+            key,
+            services,
+            prices
+          )}
         </li>
       );
     }
@@ -154,5 +170,13 @@ function Us({ req }) {
     </>
   );
 }
+
+let has = function(obj, key) {
+  return key.split(".").every(function(x) {
+    if (typeof obj != "object" || obj === null || !x in obj) return false;
+    obj = obj[x];
+    return true;
+  });
+};
 
 export default Us;

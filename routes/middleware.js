@@ -1,5 +1,5 @@
 const mailgunLoader = require("mailgun-js");
-const config = require('../config');
+const config = require('../keys.json');
 
 let mailgun = mailgunLoader({
   apiKey: config.MailGun.apiKey,

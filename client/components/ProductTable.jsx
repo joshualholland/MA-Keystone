@@ -3,7 +3,7 @@ import React from "react";
 export default function ProductTable(props) {
   // console.log(props);
   const products = props.products;
-  // console.log(products);
+  console.log(products);
   // console.log(products.length);
 
   function EmptyTable() {
@@ -24,7 +24,6 @@ export default function ProductTable(props) {
 
   return (
     <table className="productTable">
-      <tbody>
         {products.length > 0 ? (
           products.map((product, index) => {
             return (
@@ -37,7 +36,6 @@ export default function ProductTable(props) {
         ) : (
           <EmptyTable />
         )}
-      </tbody>
     </table>
   );
 }

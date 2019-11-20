@@ -180,3 +180,11 @@ $containerUnitWidth: $margin * 2 + $unitSize;
     @include nameResponsive(8rem, 2.5rem);
   }
 }
+
+#modalTable{
+  width:100%;
+}
+
+.modalHeader{
+  @include font-alt();
+}

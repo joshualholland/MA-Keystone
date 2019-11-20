@@ -22,8 +22,12 @@ Stylist.add({
     generateFilename: function(file) {
       var originalname = file.originalname;
       return `${originalname}`;
-    }
-  }
+    },
+    service: { type: String },
+    price: { type: String }
+  },
+  services: {type: Types.TextArray},
+  prices: {type: Types.TextArray}
 });
 
 Stylist.defaultColumns = "name, start_date, about, small_image";

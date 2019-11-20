@@ -4,12 +4,13 @@
 .productTable {
   width: 90%;
   margin: auto;
-  color: #adabab;
+  color: #1f1e1e;
   font-weight: 300;
   @include media-breakpoint-up(lg) {
     width: 70%;
   }
 }
+
 .productRow {
   border-top: 1px solid gray;
 }

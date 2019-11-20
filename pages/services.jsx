@@ -18,10 +18,10 @@ import "../client/scss/custom/layout/fadeIn.scss";
 // }
 
 /* DEV */
-// let url = "http://localhost:3000"
+let url = "http://localhost:3000"
 
 /* PRODUCTION */
-let url = "https://morgan-ashley-salon.herokuapp.com"
+// let url = "https://morgan-ashley-salon.herokuapp.com"
 
 Services.getInitialProps = async ({ req }) => {
   const servicesRes = await fetch(url + "/api/services");
@@ -49,14 +49,14 @@ function Services({ req }) {
       />
       <section className="text-center mt-5 pt-5">
         <h3 className="px-3">We strive to make you feel and look the best!!</h3>
-        <p className="px-3 mt-3 container">
+        <p className="px-3 mt-3 container descContent">
           We offer a free consultation for any service we perform. This is a
           time where you can come in and discuss with your stylist what you have
           dreamed of for your hair and can be scheduled directly before your
           appointment time or in advance. Our treat!
         </p>
         <h5 className="mt-4">Cancellation Policy</h5>
-        <p className="px-3 mt-3 container">
+        <p className="px-3 mt-3 container descContent">
           We may require a credit card to reserve appointments. In order to
           avoid a service charge, and ensure your appointments for other
           clients, please reschedule or cancel appointments before the 24 hour
