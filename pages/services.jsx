@@ -18,10 +18,10 @@ import "../client/scss/custom/layout/fadeIn.scss";
 // }
 
 /* DEV */
-let url = "http://localhost:3000"
+// let url = "http://localhost:3000"
 
 /* PRODUCTION */
-// let url = "https://morgan-ashley-salon.herokuapp.com"
+let url = "https://morgan-ashley-salon.herokuapp.com"
 
 Services.getInitialProps = async ({ req }) => {
   const servicesRes = await fetch(url + "/api/services");

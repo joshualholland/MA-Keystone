@@ -20,10 +20,10 @@ import "../client/scss/custom/layout/fadeIn.scss";
 // }
 
 /* DEV */
-let url = "http://localhost:3000";
+// let url = "http://localhost:3000";
 
 /* PRODUCTION */
-// let url = "https://morgan-ashley-salon.herokuapp.com";
+let url = "https://morgan-ashley-salon.herokuapp.com";
 
 Us.getInitialProps = async ({ req }) => {
   const stylistRes = await fetch(url + "/api/stylists");

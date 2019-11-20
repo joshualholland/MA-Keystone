@@ -9,8 +9,8 @@ import {
 import '../scss/custom/layout/maps.scss';
 
 const GoogleJSMap = React.memo(() =>{
-  // const apiKey = config.Google.apiKey;
-  const apiKey= '' // KEEP LIKE THIS UNTIL YOU PUT LIVE TO PREVENT TOO MANY REQUESTS
+  const apiKey = config.Google.apiKey;
+  // const apiKey= '' // KEEP LIKE THIS UNTIL YOU PUT LIVE TO PREVENT TOO MANY REQUESTS
 
   function Map() {
     return (
