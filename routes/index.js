@@ -21,32 +21,16 @@ module.exports = nextApp => keystoneApp => {
     res.redirect("/keystone");
   })
 
-  // Gets Bridal data
-  keystoneApp.get(
-    "/api/bridals",
-    keystone.middleware.api,
-    routes.api.bridal.list
-  );
-  // Service data
-  keystoneApp.get(
-    "/api/services",
-    keystone.middleware.api,
-    routes.api.services.list
-  );
-  // Stylist data
-  keystoneApp.get(
-    "/api/stylists",
-    keystone.middleware.api,
-    routes.api.stylists.list
-  );
-  // Team data
+  keystoneApp.get("/api/bridals", keystone.middleware.api, routes.api.bridal.list);
+  keystoneApp.get("/api/services", keystone.middleware.api, routes.api.services.list);
+  keystoneApp.get("/api/stylists", keystone.middleware.api, routes.api.stylists.list);
   keystoneApp.get("/api/team", keystone.middleware.api, routes.api.team.list);
-  // Owner data
   keystoneApp.get("/api/owners",keystone.middleware.api,routes.api.owners.list)
 
-  //MailChimp
+  // Sends to MailChimp API
   keystoneApp.post("/api/careers", middleware.mailgunCareers);
 
+  // Sends to MailChimp API
   keystoneApp.post("/api/contact", middleware.mailgunContact);
 
   keystoneApp.get("*", (req, res) => {

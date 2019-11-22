@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import Head from 'next/head';
 import NumberFormat from 'react-number-format';
+
 import Banner from "../client/components/Banner";
 import Navbar from "../client/components/Navbar";
 import Footer from "../client/components/Footer";
-import "../client/scss/app.scss";
-import "../client/scss/custom/layout/fadeIn.scss";
 import GoogleJSMap from "../client/components/GoogleJSMap";
 import ConfirmMessage from "../client/components/ConfirmMessage";
+
+import "../client/scss/app.scss";
+import "../client/scss/custom/layout/fadeIn.scss"; // This CSS conflicts with bootstrap so it's separated here.
 
 export default class Careers extends Component {
   constructor(props) {

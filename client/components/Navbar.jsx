@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import $ from "jquery";
 
+
+
 const Navbar = () => {
   // Turns the dropdown menu on and off with display:block/none
   function toggleMenu(event) {
@@ -16,6 +18,8 @@ const Navbar = () => {
       maximize();
     }
   }
+
+  // This is for a scroll down event and will increase the height of the navbar
   function maximize() {
     const naviContainer = document.getElementById("naviContainer");
     const navi_nav = document.getElementById("navi-nav");
@@ -34,6 +38,7 @@ const Navbar = () => {
     menuToggle.className = "animated navBarMaximize";
   }
 
+  // This is for a scroll up (default) event and will increase the height of the navbar
   function minimize() {
     const naviContainer = document.getElementById("naviContainer");
     const navi_nav = document.getElementById("navi-nav");

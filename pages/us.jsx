@@ -1,26 +1,16 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
+import fetch from "isomorphic-unfetch";
+import jquery from "jquery";
+import dateParser from "../customModules/dateParser";
+
 import Navbar from "../client/components/Navbar";
 import Banner from "../client/components/Banner";
 import PersonalModal from "../client/components/PersonalModal";
-import fetch from "isomorphic-unfetch";
-import "../client/scss/app.scss";
-import jquery from "jquery";
-import dateParser from "../customModules/dateParser";
 import Footer from "../client/components/Footer";
-import "../client/scss/custom/layout/fadeIn.scss";
 
-// require("dotenv").config();
-// let url;
-// if (process.env.NODE_ENV === "development") {
-//   url = process.env.NODE_LOCAL;
-// }
-// if (process.env.NODE_ENV === "production") {
-//   url = process.env.NODE_LIVEURL;
-// }
-
-/* DEV */
-// let url = "http://localhost:3000";
+import "../client/scss/app.scss";
+import "../client/scss/custom/layout/fadeIn.scss"; // This CSS conflicts with bootstrap so it's separated here.
 
 /* PRODUCTION */
 let url = "https://morgan-ashley-salon.herokuapp.com";
@@ -59,10 +49,10 @@ function Us({ req }) {
     for (let i = 0; i < people.length; i++) {
       let name = people[i].name;
       let start_date = dateParser(people[i].start_date);
-      let smallImage = has(people[i], "small_image.url") // prevents undefined error
+      let smallImage = has(people[i], "small_image.url") // prevents undefined error with empty database
         ? people[i].small_image.url
         : "/images/misc/error.jpg";
-      let largeImage = has(people[i], "large_image.url") // prevents undefined error
+      let largeImage = has(people[i], "large_image.url") // prevents undefined error with empty database
         ? people[i].large_image.url
         : "/images/misc/error.jpg";
       let about = people[i].about;
@@ -100,6 +90,7 @@ function Us({ req }) {
     return items;
   }
 
+  // This will handle greying out buttons on the US page
   function handleClick(e) {
     const inactiveButton = jquery(".usButtons.active");
     const inactiveListId = inactiveButton.attr("id").replace("Button", "List");
@@ -171,6 +162,7 @@ function Us({ req }) {
   );
 }
 
+// This helper method can test whether an object has a certain property or not
 let has = function(obj, key) {
   return key.split(".").every(function(x) {
     if (typeof obj != "object" || obj === null || !x in obj) return false;

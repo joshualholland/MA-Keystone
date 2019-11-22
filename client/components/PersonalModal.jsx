@@ -10,6 +10,7 @@ export default function PersonalModal(
   services,
   prices
 ) {
+  // This will pull products and prices from the backend API and create elements
   function displayProducts(services, prices) {
     if (typeof services !== "undefined" && typeof prices !== "undefined") {
       if (services.length > 0) {

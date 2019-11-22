@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import Head from 'next/head';
+import { Link, animateScroll as scroll } from "react-scroll";
+import Loader from "react-loader";
+import anime from "animejs";
+
 import Navbar from "../client/components/Navbar";
 import BannerCarousel from "../client/components/BannerCarousel";
 import ReviewsCarousel from "../client/components/ReviewsCarousel";
 import Footer from "../client/components/Footer";
-import Loader from "react-loader";
-import { Link, animateScroll as scroll } from "react-scroll";
-import anime from "animejs";
+
 import "../client/scss/app.scss";
 
 export default class Home extends Component {
@@ -20,9 +22,10 @@ export default class Home extends Component {
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
+
   wait = async () => {
     await this.updateWindowDimensions();
-    await anime({
+    await anime({ // This makes the page fade in properly
       targets: "body",
       opacity: [0, 1],
       duration: 3000
@@ -34,10 +37,10 @@ export default class Home extends Component {
 
   componentDidMount() {
     window.addEventListener("resize", this.updateWindowDimensions);
-
     this.wait();
   }
 
+  // This allows for the first picture carousel to always match the height of the window.
   updateWindowDimensions() {
     this.setState({ height: window.innerHeight });
   }

@@ -10,6 +10,7 @@ const r = require.context(
 export default function BannerCarousel(props) {
   
 
+  // This creates the carousel items with an input parameter which contains the image paths
   function createItems(r) {
     let items = [];
     r.keys().map((item, index) => {
@@ -46,24 +47,6 @@ export default function BannerCarousel(props) {
       data-interval="3000"
     >
       <div className="carousel-inner">{createItems(r)}</div>
-      {/* <a
-        className="carousel-control-prev"
-        href="#MAcarousel"
-        role="button"
-        data-slide="prev"
-      >
-        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span className="sr-only">Previous</span>
-      </a>
-      <a
-        className="carousel-control-next"
-        href="#MAcarousel"
-        role="button"
-        data-slide="next"
-      >
-        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-        <span className="sr-only">Next</span>
-      </a> */}
     </div>
   );
 }

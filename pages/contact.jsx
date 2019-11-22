@@ -1,15 +1,17 @@
 import React, { Component } from "react";
-import Head from 'next/head';
+import Head from "next/head";
+
 import Navbar from "../client/components/Navbar";
 import Banner from "../client/components/Banner";
-import "../client/scss/app.scss";
-import "../client/scss/custom/layout/fadeIn.scss";
 import CallUs from "../client/components/CallUs";
 import Address from "../client/components/Address";
 import Email from "../client/components/Email";
 import Footer from "../client/components/Footer";
 import GoogleJSMap from "../client/components/GoogleJSMap";
 import ConfirmMessage from "../client/components/ConfirmMessage";
+
+import "../client/scss/app.scss";
+import "../client/scss/custom/layout/fadeIn.scss"; // This CSS conflicts with bootstrap so it's separated here.
 
 export default class Contact extends Component {
   constructor(props) {
@@ -22,6 +24,7 @@ export default class Contact extends Component {
     };
   }
 
+  // This will submit form data to the backend for the contact page
   handleSubmit = async e => {
     e.preventDefault();
 
@@ -32,7 +35,7 @@ export default class Contact extends Component {
           "Content-type": "application/json"
         },
         body: JSON.stringify(this.state)
-      }).then((e) => {
+      }).then(e => {
         $(".maSubmit").toggle();
         $("#confirmMessage").addClass("active");
       });

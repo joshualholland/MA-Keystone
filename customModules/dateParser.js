@@ -1,3 +1,4 @@
+// This module will convert date strings to a more readable format
 export default function dateParser(dateString) {
   dateString = dateString.split("-");
   let year = dateString[0];

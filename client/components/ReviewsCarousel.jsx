@@ -1,16 +1,11 @@
 import React, { useEffect } from "react";
 
 export default function ReviewsCarousel() {
-  //componentDidMount()
-  // useEffect(() => {
-  //   $("#reviewsCarousel").carousel("pause");
-  // }, []);
 
   return (
     <div
       id="reviewsCarousel"
       className="carousel slide row no-gutters"
-      // data-ride="carousel"
       data-interval="3000"
     >
       <ol className="carousel-indicators">

@@ -1,24 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Head from 'next/head';
+import fetch from "isomorphic-unfetch";
+
 import Navbar from "../client/components/Navbar";
 import Banner from "../client/components/Banner";
 import ProductTable from "../client/components/ProductTable";
 import Footer from "../client/components/Footer";
-import fetch from "isomorphic-unfetch";
+
 import "../client/scss/app.scss";
-import "../client/scss/custom/layout/fadeIn.scss";
-
-// require("dotenv").config();
-// let url;
-// if (process.env.NODE_ENV === "development") {
-//   url = process.env.NODE_LOCAL;
-// }
-// if (process.env.NODE_ENV === "production") {
-//   url = process.env.NODE_LIVEURL;
-// }
-
-/* DEV */
-// let url = "http://localhost:3000"
+import "../client/scss/custom/layout/fadeIn.scss"; // This CSS conflicts with bootstrap so it's separated here.
 
 /* PRODUCTION */
 let url = "https://morgan-ashley-salon.herokuapp.com"
@@ -34,7 +24,6 @@ Services.getInitialProps = async ({ req }) => {
 function Services({ req }) {
   const services = req.servicesJson.services;
   const bridals = req.bridalsJson.bridals;
-  // console.log(services);
 
   return (
     <>
