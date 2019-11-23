@@ -9,3 +9,4 @@ public/team/*
 public/owners/*
 backups
 config/development.js
+.env
