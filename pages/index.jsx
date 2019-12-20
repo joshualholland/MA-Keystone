@@ -78,7 +78,7 @@ export default class Home extends Component {
         </div>
         <section className="row overflow-hidden no-gutters " id="firstSection">
           <div className="col-12 col-xl-6">
-            <img className="w-100" src="/images/landing/landing1.jpg"></img>
+            <img className="w-100" src="/images/landing/culture1.jpg"></img>
           </div>
           <div className="col-12 col-xl-6 contentContainer text-center">
             <div className="row text-center mt-xl-5 pt-xl-5">
