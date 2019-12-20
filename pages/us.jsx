@@ -12,6 +12,8 @@ import Footer from "../client/components/Footer";
 import "../client/scss/app.scss";
 import "../client/scss/custom/layout/fadeIn.scss"; // This CSS conflicts with bootstrap so it's separated here.
 
+// MONTH DAY YEAR 
+
 /* PRODUCTION */
 let url = "https://morgan-ashley-salon.herokuapp.com";
 
