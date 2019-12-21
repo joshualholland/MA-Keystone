@@ -17,7 +17,7 @@ module.exports = nextApp => keystoneApp => {
   keystoneApp.use(bodyParser.json());
 
   // keystoneApp.get("/admin",middleware.requireUser, middleware.adminView);
-  keystoneApp.get("/admin",function(req,res){
+  keystoneApp.get("/admin", function (req, res) {
     res.redirect("/keystone");
   })
 
@@ -25,7 +25,9 @@ module.exports = nextApp => keystoneApp => {
   keystoneApp.get("/api/services", keystone.middleware.api, routes.api.services.list);
   keystoneApp.get("/api/stylists", keystone.middleware.api, routes.api.stylists.list);
   keystoneApp.get("/api/team", keystone.middleware.api, routes.api.team.list);
-  keystoneApp.get("/api/owners",keystone.middleware.api,routes.api.owners.list)
+  keystoneApp.get("/api/owners", keystone.middleware.api, routes.api.owners.list)
+  keystoneApp.get("/api/color-services", keystone.middleware.api, routes.api.color.list);
+  keystoneApp.get("/api/other-services", keystone.middleware.api, routes.api.other.list);
 
   // Sends to MailChimp API
   keystoneApp.post("/api/careers", middleware.mailgunCareers);

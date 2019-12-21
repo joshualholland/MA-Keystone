@@ -1,7 +1,7 @@
 var keystone = require("keystone");
 var Types = keystone.Field.Types;
 
-var Other_Services = new keystone.List("Services", {
+var Other_Services = new keystone.List("Other_Services", {
     autokey: { path: "slug", from: "title", unique: true },
     map: { name: "title" }
 });
