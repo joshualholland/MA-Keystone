@@ -9,3 +9,8 @@
     font-family: "Open Sans", arial, sans-serif;
     line-height: 1.6;
 }
+
+@mixin font-para {
+    font-family: Dosis, arial, sans-serif;
+    text-transform: uppercase;
+}

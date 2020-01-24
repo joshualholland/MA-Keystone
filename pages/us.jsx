@@ -53,7 +53,7 @@ function Us({ req }) {
       let start_date = dateParser(people[i].start_date);
       let smallImage = has(people[i], "small_image.url") // prevents undefined error with empty database
         ? people[i].small_image.url
-        : "/images/misc/error.jpg";
+        : "/images/misc/error.png";
       let largeImage = has(people[i], "large_image.url") // prevents undefined error with empty database
         ? people[i].large_image.url
         : "/images/misc/error.jpg";
@@ -114,7 +114,7 @@ function Us({ req }) {
       </Head>
       <Navbar />
       <Banner
-        bannerImage={"/images/us/banner.jpg"}
+        bannerImage={"/images/us/us-banner.jpg"}
         sectionName="us"
         content="MEET OUR TEAM"
       />
@@ -147,7 +147,7 @@ function Us({ req }) {
       </div>
       <div className="container-fluid" id="bubbleContainer">
         <p className="text-center mt-4" style={{ color: "grey" }}>
-          Click on a stylist to see their work and prices!
+          Click on a stylist to see their services and prices!
         </p>
         <ul className="flex-container active" id="stylistsList">
           {createPeopleBubbles(stylistsList, stylistsPath)}
@@ -165,8 +165,8 @@ function Us({ req }) {
 }
 
 // This helper method can test whether an object has a certain property or not
-let has = function(obj, key) {
-  return key.split(".").every(function(x) {
+let has = function (obj, key) {
+  return key.split(".").every(function (x) {
     if (typeof obj != "object" || obj === null || !x in obj) return false;
     obj = obj[x];
     return true;

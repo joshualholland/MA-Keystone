@@ -63,18 +63,20 @@ export default function PersonalModal(
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div className="modal-body">
-              <div className="row">
-                <div className="col-12 col-md-6">
+            <div id="modal-flex">
+              <div className="modal-body">
+                <div className="modal-image-container">
                   <img className="modalImageFit" src={image} />
                 </div>
-                <div className="col-12 col-md-6">
-                  <h5 className="modal-date p-2 mb-5">{startDate}</h5>
-                  <p className="modal-about p-1">{about}</p>
+                <div id="modal-text-container">
+                  <div className="modal-about-container">
+                    <h5 className="modal-date">{startDate}</h5>
+                    <p className="modal-about">{about}</p>
+                  </div>
+                  <div className="modal-services">{displayProducts(services, prices)}</div>
                 </div>
               </div>
             </div>
-            <div className="mx-5 mb-4">{displayProducts(services, prices)}</div>
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ const r = require.context(
 );
 
 export default function BannerCarousel(props) {
-  
+
 
   // This creates the carousel items with an input parameter which contains the image paths
   function createItems(r) {
@@ -44,7 +44,7 @@ export default function BannerCarousel(props) {
       id="MAcarousel"
       className="carousel slide carousel-fade imageFitCarousel"
       data-ride="carousel"
-      data-interval="3000"
+      data-interval="2000"
     >
       <div className="carousel-inner">{createItems(r)}</div>
     </div>

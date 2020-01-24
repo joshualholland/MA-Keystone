@@ -22,12 +22,15 @@ const mailgunCareers = async (req, res, next) => {
   const desiredPosition = req.body.desiredPosition;
   const message = req.body.message;
 
-  const to = "foundanoreo@gmail.com"; // Change to MA Amanda's email
+  const to = "joshualholland@gmail.com"; // Change to MA Amanda's email
   const from = email;
   const subject = "Application from: " + name;
   const text =
     "From: " +
     name +
+    "\n\n" +
+    "Desired Position: " +
+    desiredPosition +
     "\n\n" +
     "Message: \n" +
     message +
@@ -49,7 +52,7 @@ const mailgunContact = async (req, res, next) => {
   const email = req.body.email;
   const message = req.body.message;
 
-  const to = "foundanoreo@gmail.com"; // Change to MA Amanda's email
+  const to = "joshualholland@gmail.com"; // Change to MA Amanda's email
   const from = email;
   const subject = "Inquiry from: " + name;
   const text =
@@ -63,7 +66,7 @@ const mailgunContact = async (req, res, next) => {
   }
 };
 
-const requireUser = function(req, res, next) {
+const requireUser = function (req, res, next) {
   if (!req.user) {
     req.flash("error", "Please sign in to this access this page.");
     res.redirect("/keystone/signin");
@@ -72,7 +75,7 @@ const requireUser = function(req, res, next) {
   }
 };
 
-const adminView = function(req,res){
+const adminView = function (req, res) {
   res.redirect('/')
 }
 

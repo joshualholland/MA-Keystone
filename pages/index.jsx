@@ -53,9 +53,9 @@ export default class Home extends Component {
     if (this.state.isLoading) return <Loader />;
     return (
       <>
-      <Head>
-        <title>Morgan Ashley Salon</title>
-      </Head>
+        <Head>
+          <title>Morgan Ashley Salon</title>
+        </Head>
         <div className="page" id="top">
           <Navbar />
           <div className="imageContainer bg-dark relative">
@@ -78,7 +78,7 @@ export default class Home extends Component {
         </div>
         <section className="row overflow-hidden no-gutters " id="firstSection">
           <div className="col-12 col-xl-6">
-            <img className="w-100" src="/images/landing/culture1.jpg"></img>
+            <img className="w-100" src="/images/landing/culture2.jpg"></img>
           </div>
           <div className="col-12 col-xl-6 contentContainer text-center">
             <div className="row text-center mt-xl-5 pt-xl-5">
@@ -120,15 +120,15 @@ export default class Home extends Component {
           </div>
           <div className="col-12 col-xl-6">
             <img
-              id="tallPhoto"
+              // id="tallPhoto"
               className="w-100 order-0"
-              src="/images/landing/landing2.jpg"
+              src="/images/landing/craft.jpg"
             ></img>
           </div>
         </section>
         <section className="row overflow-hidden no-gutters ">
           <div className="col-12 col-xl-6">
-            <img className="w-100" src="/images/landing/landing3.jpg"></img>
+            <img className="w-100" src="/images/landing/community.jpg"></img>
           </div>
           <div className="col-12 col-xl-6 contentContainer text-center">
             <div className="row text-center mt-xl-5">

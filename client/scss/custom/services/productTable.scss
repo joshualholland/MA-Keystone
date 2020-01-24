@@ -1,6 +1,12 @@
 .productHeader {
   @include font-alt;
 }
+
+.productUnder {
+  @include font-para;
+  background-color: yellow;
+}
+
 .productTable {
   width: 90%;
   margin: auto;

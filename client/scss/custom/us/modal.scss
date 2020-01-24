@@ -23,5 +23,23 @@
   font-size: 1rem;
 }
 
-.modal-about {
+#modal-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: row;
+}
+
+#modal-text-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+}
+
+.modal-services {
+  display: flex;
+  flex-direction: column;
 }
