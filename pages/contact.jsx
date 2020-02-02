@@ -59,8 +59,7 @@ export default class Contact extends Component {
         <ConfirmMessage />
         <div className="container slimContainer">
           <h3 className="mt-5">
-            Reach out to us with questions or requests! We would love to get to
-            know you and help however we can!
+            We strive to make you look &amp; feel your best. Reach out to us with questions or requests! We'd love to help you however we can!
           </h3>
           <div className="row">
             <div className="col-sm-12 mt-3 mb-4 mt-lg-5 col-lg-6">

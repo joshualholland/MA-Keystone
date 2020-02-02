@@ -23,11 +23,9 @@ export default function ReviewsCarousel() {
           </div>
           <h3 className="wpsHeader">WHAT PEOPLE SAY</h3>
           <p className="wpsContent">
-            I have never had a better hair cut experience than at Morgan
-            Ashley... Not only did I leave with a great cut, but I felt
-            beautiful and confident.
+            I have such great things to say about Morgan Ashley Salon! I've been going here for 10 years and have never had any complaints! Everyone is always so warm, welcoming and professional. I moved to Atlanta a few years ago and I still make the drive to get my hair done. I couldn't imagine going anywhere else! Awesome stylists!
           </p>
-          <footer className="wpsAuthor">ELLEN DEWITT</footer>
+          <footer className="wpsAuthor">Andi Buie</footer>
         </div>
         <div className="carousel-item rcItem">
           <div className="icon-quote">
@@ -35,10 +33,9 @@ export default function ReviewsCarousel() {
           </div>
           <h3 className="wpsHeader">WHAT PEOPLE SAY</h3>
           <p className="wpsContent">
-            It is always a cool, fun and relaxing place to get my hair done. I
-            would never go anywhere else.
+            I am so grateful for a salon like Morgan Ashley Salon. From first being greeted when I walk in the door, to cut, color, and being styled out, everything is done in kindness and with excellence. There is no place like it in Birmingham.
           </p>
-          <footer className="wpsAuthor">MEGHAN LEVANT</footer>
+          <footer className="wpsAuthor">Nedra Springer</footer>
         </div>
         <div className="carousel-item rcItem">
           <div className="icon-quote">
@@ -46,11 +43,9 @@ export default function ReviewsCarousel() {
           </div>
           <h3 className="wpsHeader">WHAT PEOPLE SAY</h3>
           <p className="wpsContent">
-            Everyone is so nice and goes the extra mile to make sure your
-            experience is comfortable and VIP. From complimentary coffee to
-            comfy couches, going to Morgan Ashley is a relaxing experience.
+            From the proficient greeters at the front desk, to the shampoo girls' skilled expertise, to the stylists' masterful hair-care knowledge, to the behind the scenes support staff- one becomes a confident client.
           </p>
-          <footer className="wpsAuthor">COURTNEY HANCOCK</footer>
+          <footer className="wpsAuthor">Dolores S. Taylor </footer>
         </div>
       </div>
       <a

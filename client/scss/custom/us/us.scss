@@ -112,6 +112,10 @@ $containerUnitWidth: $margin * 2 + $unitSize;
   height: $unitSize;
   margin-top: 10px;
   border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 
   @mixin resize($unitSize) {
     width: $unitSize;
@@ -159,6 +163,7 @@ $containerUnitWidth: $margin * 2 + $unitSize;
   line-height: 1.4rem;
   opacity: 0.9;
   -webkit-font-smoothing: antialiased;
+  width: 80%;
 
   @mixin nameResponsive($bottom, $fontSize) {
     bottom: $bottom;

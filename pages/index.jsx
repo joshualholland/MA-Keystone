@@ -78,18 +78,15 @@ export default class Home extends Component {
         </div>
         <section className="row overflow-hidden no-gutters " id="firstSection">
           <div className="col-12 col-xl-6">
-            <img className="w-100" src="/images/landing/culture2.jpg"></img>
+            <img className="w-100" src="/images/landing/motivation.jpg"></img>
           </div>
           <div className="col-12 col-xl-6 contentContainer text-center">
             <div className="row text-center mt-xl-5 pt-xl-5">
               <h3 className="headerContent text-center col-12" id="culture">
-                CULTURE
+                PURPOSE
               </h3>
               <p className="descContent mt-xl-5">
-                We are passionate about creating a culture at Morgan Ashley that
-                is both peaceful and inspiring. Our hope is to give you an
-                experience that will refresh you from the moment you walk
-                through our doors until we say goodbye.
+                We strive to serve others and our community by delivering excellence in all aspects of the services we provide through our salon.  We know you have a choice in where you go and we're glad you're here!
               </p>
             </div>
           </div>
@@ -101,28 +98,21 @@ export default class Home extends Component {
                 className="offset-2 col-2 craftIcons"
                 src="/images/landing/icon-1.png"
               ></img>
-              <h3 className="col-4 headerContent">CRAFT</h3>
+              <h3 className="col-4 headerContent">MOTIVATION &amp; IMPACT</h3>
               <img
                 className="col-2 craftIcons"
                 src="/images/landing/icon-2.png"
               ></img>
             </div>
             <p className="descContent">
-              The craft of hairdressing for us at Morgan Ashley is to produce
-              the most precise and personalized look for each client. We believe
-              in education being at the core of how we achieve this. We are
-              always learning the newest techniques and trends so we can provide
-              you with the best! Our team receives in house education as well as
-              being sent to New York to attend the most inspiring and creative
-              classes at the House of Bumble with our product line Bumble and
-              Bumble.
+              We commit to providing hospitality to each and every one of you who walk through our doors.  Ensuring the highest level of client care and creating an unforgettable experience is at the heart of why we do what we do!
             </p>
           </div>
           <div className="col-12 col-xl-6">
             <img
               // id="tallPhoto"
               className="w-100 order-0"
-              src="/images/landing/craft.jpg"
+              src="/images/landing/MorganAshley_Fall19Shoot1-0079.jpg"
             ></img>
           </div>
         </section>
@@ -132,14 +122,10 @@ export default class Home extends Component {
           </div>
           <div className="col-12 col-xl-6 contentContainer text-center">
             <div className="row text-center mt-xl-5">
-              <h3 className="headerContent col-12 mt-xl-3">COMMUNITY</h3>
+              <h3 className="headerContent col-12 mt-xl-3">ALWAYS LEARNING</h3>
             </div>
             <p className="descContent">
-              We strive to make a difference inside and outside the walls of
-              Morgan Ashley by giving back to our community and reaching out to
-              those in need around us. We feel so honored to get to partner with
-              various ministries and individuals who are making a difference in
-              our community. This is us and the heart of Morgan Ashley.
+              From coloring to cut &amp; styling, our stylists are up to date with the latest trends & techniques in the industry.  Our aim is to create a look that is uniquely yours and to provide you with the tools to recreate your new style at home.
             </p>
           </div>
         </section>

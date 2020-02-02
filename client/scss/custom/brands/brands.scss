@@ -1,0 +1,32 @@
+@import "../../mixins.scss";
+
+// This will reposition the image to fit for different windows
+@mixin bannerResponsive(
+  $background-position,
+  $height,
+  $background-size: "cover"
+) {
+  background-position: $background-position;
+  height: $height;
+  background-size: $background-size;
+}
+
+#services {
+
+  @media (min-width: "1350px") {
+    @include bannerResponsive(38% -12rem, 20rem, cover);
+  }
+  @media (min-width: "1450px") {
+    @include bannerResponsive(38% -13rem, 20rem, cover);
+  }
+  @media (min-width: "1600px") {
+    @include bannerResponsive(38% -18rem, 20rem, cover);
+  }
+  @media (min-width: "1750px") {
+    @include bannerResponsive(38% -21rem, 20rem, cover);
+  }
+}
+
+#brands {
+  
+}
