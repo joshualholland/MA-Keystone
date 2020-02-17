@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import config from '../../keys.json';
+
 import {
   GoogleMap,
   withScriptjs,
