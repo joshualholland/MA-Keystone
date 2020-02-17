@@ -3,10 +3,8 @@ updates
 .vscode/
 .next/
 .prettierignore
-keys.json
 public/stylists/*
 public/team/*
 public/owners/*
 backups
-config/development.js
 .env

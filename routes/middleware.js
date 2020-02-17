@@ -1,11 +1,10 @@
 const mailgunLoader = require("mailgun-js");
 const multer = require('multer');
-const config = require('../keys.json');
 var path = require("path");
 
 let mailgun = mailgunLoader({
-  apiKey: config.MailGun.apiKey,
-  domain: config.MailGun.apiDomain
+  apiKey: process.env.MAILGUN_API_KEY,
+  domain: process.env.MAILGUN_API_DOMAIN
 });
 
 const sendEmail = (to, from, subject, text, attachment) => {
