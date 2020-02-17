@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Head from 'next/head';
 import NumberFormat from 'react-number-format';
+import axios from 'axios';
 
 import Banner from "../client/components/Banner";
 import Navbar from "../client/components/Navbar";
@@ -21,35 +22,48 @@ export default class Careers extends Component {
       phone: "",
       desiredPosition: "",
       desiredHours: "",
-      resume: "",
       message: "",
       reason: "",
+      selectedFile: null,
       crayon: ""
     };
   }
 
   handleFileChange = async e => {
     e.preventDefault();
-    this.setState({"fileName": this.fileInput.current.files[0].name})
+    console.log(event.target.files[0]);
+    this.setState({
+      selectedFile: event.target.files[0],
+      loaded: 0
+    });
   }
 
   handleSubmit = async e => {
     e.preventDefault();
+    const data = new FormData();
+    data.append('name', this.state.name);
+    data.append('email', this.state.email);
+    data.append('phone', this.state.phone);
+    data.append('desiredPostion', this.state.desiredPosition);
+    data.append('desiredHours', this.state.desiredHours);
+    data.append('message', this.state.message);
+    data.append('reason', this.state.reason);
+    data.append('file', this.state.selectedFile);
+    data.append('crayon', this.state.crayon);
 
-    try {
-      await fetch("/api/careers", {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json"
-        },
-        body: JSON.stringify(this.state)
-      }).then((response) => {
-        $(".maSubmit").toggle();
-        $("#confirmMessage").addClass("active");
-      });
-    } catch (e) {
-      throw e;
+    const header = {
+      'Content-Type': 'multipart/form-data'
     }
+
+    console.log(data)
+
+    axios.post('/api/careers', data, {
+      headers: header
+    }).then(res => {
+      console.log(res);
+      $(".maSubmit").toggle();
+        $("#confirmMessage").addClass("active");
+    });
   };
 
   render() {
@@ -144,9 +158,8 @@ export default class Careers extends Component {
                   className="form-control"
                   id="resumeForm"
                   placeholder="Upload resume if you have one!"
-                  ref={this.fileInput}
                   onChange={e => {
-                    this.setState({ resume: e.target.value });
+                    this.handleFileChange(e);
                   }} />
                 </div>
                 <div className="col-12 col-lg-6" id="messageContainer">

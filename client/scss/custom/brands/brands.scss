@@ -12,7 +12,6 @@
 }
 
 #services {
-
   @media (min-width: "1350px") {
     @include bannerResponsive(38% -12rem, 20rem, cover);
   }
@@ -28,5 +27,28 @@
 }
 
 #brands {
-  
+  .product-header {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .product-logos {
+    .davine-logo {
+      margin-bottom: 80px;
+      text-align: center;
+    }
+
+    .learn-more {
+      color: black;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+    }
+  }
+  .davine-logo img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 12px;
+  }
 }

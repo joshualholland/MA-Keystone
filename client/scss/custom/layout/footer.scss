@@ -32,6 +32,13 @@
     text-transform: lowercase;
 }
 
+.address {
+    @include font-alt;
+    font-size: 0.8rem;
+    margin-bottom: 0;
+    text-transform: none;
+}
+
 $rootSize:1rem;
 
 .footerSM {

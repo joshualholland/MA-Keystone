@@ -6,7 +6,7 @@
   "scripts": {
     "testing": "NODE_ENV=production node test.js",
     "build": "next build",
-    "dev": "node keystone.js",
+    "dev": "next build && NODE_ENV=production nodemon keystone.js",
     "start": "next build && NODE_ENV=production node keystone.js",
     "prod": "next build && node keystone.js",
     "heroku-postbuild": "npm run build"
@@ -28,9 +28,10 @@
     "jquery": "^3.4.1",
     "keystone": "^4.2.1",
     "mailgun-js": "^0.22.0",
+    "multer": "^1.4.2",
     "next": "^9.0.8",
     "next-images": "^1.2.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "nodemon": "^1.19.3",
     "npm-run-all": "^4.1.5",
     "react": "^16.10.1",
@@ -46,8 +47,5 @@
     "underscore": "^1.9.1",
     "url-loader": "^2.2.0",
     "webpack": "^4.41.0"
-  },
-  "nodemonConfig": {
-    "delay": "1000"
   }
 }

@@ -1,27 +1,35 @@
 const mailgunLoader = require("mailgun-js");
+const multer = require('multer');
 const config = require('../keys.json');
+var path = require("path");
 
 let mailgun = mailgunLoader({
   apiKey: config.MailGun.apiKey,
   domain: config.MailGun.apiDomain
 });
 
-const sendEmail = (to, from, subject, text) => {
+const sendEmail = (to, from, subject, text, attachment) => {
   let data = {
     to: to,
     from: from,
     subject: subject,
-    text: text
+    text: text,
+    attachment: attachment
   };
   return mailgun.messages().send(data);
 };
 
 const mailgunCareers = async (req, res, next) => {
+  console.log(req.body);
   const name = req.body.name;
   const email = req.body.email;
+  const phone = req.body.phone;
   const desiredPosition = req.body.desiredPosition;
+  const desiredHours = req.body.desiredHours;
   const message = req.body.message;
-
+  const reason = req.body.reason;
+  const selectedFile = req.body.selectedFile;
+  const crayon = req.body.crayon;
   const to = "joshualholland@gmail.com"; // Change to MA Amanda's email
   const from = email;
   const subject = "Application from: " + name;
@@ -29,16 +37,29 @@ const mailgunCareers = async (req, res, next) => {
     "From: " +
     name +
     "\n\n" +
+    "Phone: " +
+    phone +
+    "\n\n" +
     "Desired Position: " +
     desiredPosition +
+    "\n\n" +
+    "Desired Hours: " +
+    desiredHours +
     "\n\n" +
     "Message: \n" +
     message +
     "\n\n" +
+    "Reason: \n" +
+    reason +
+    "\n\n" +
+    "Crayon: \n" +
+    crayon +
+    "\n\n" +
     "Reply: " +
     email;
+  const attachment = selectedFile
   try {
-    await sendEmail(to, from, subject, text);
+    await sendEmail(to, from, subject, text, attachment);
     res.send("OK");
   } catch (e) {
     console.log(e + "\n ERROR");

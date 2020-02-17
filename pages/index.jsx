@@ -94,15 +94,7 @@ export default class Home extends Component {
         <section className="row overflow-hidden no-gutters ">
           <div className="col-12 col-xl-6 order-1 order-xl-0 contentContainer text-center">
             <div className="row mt-xl-5">
-              <img
-                className="offset-2 col-2 craftIcons"
-                src="/images/landing/icon-1.png"
-              ></img>
-              <h3 className="col-4 headerContent">MOTIVATION &amp; IMPACT</h3>
-              <img
-                className="col-2 craftIcons"
-                src="/images/landing/icon-2.png"
-              ></img>
+              <h3 className="col-12 headerContent text-center">MOTIVATION &amp; IMPACT</h3>
             </div>
             <p className="descContent">
               We commit to providing hospitality to each and every one of you who walk through our doors.  Ensuring the highest level of client care and creating an unforgettable experience is at the heart of why we do what we do!

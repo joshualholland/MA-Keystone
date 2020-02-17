@@ -105,6 +105,24 @@ function Us({ req }) {
     const activeList = jquery("#" + activeListId);
     activeButton.addClass("active");
     activeList.addClass("active");
+
+    displaySmallText();
+  }
+
+  function displaySmallText() {
+    let stylistsButton = document.getElementById('stylistsButton');
+    let teamButton = document.getElementById('teamButton');
+    let ownersButton = document.getElementById('ownersButton');
+    let smallText = document.getElementById("labelText");
+    console.log(stylistsButton.className)
+    if (stylistsButton.className === "usButtons active") {
+      smallText.innerText = 'Click on a stylist to see their services and prices!'
+    } else if (teamButton.className === "usButtons active") {
+      smallText.innerText = 'Click on a team member to learn more!'
+    } else if (ownersButton.className === "usButtons active") {
+      smallText.innerText = 'Click on an owner to learn more!'
+    }
+    
   }
 
   return (
@@ -131,7 +149,7 @@ function Us({ req }) {
           </div>
           <div className="usBtnContainer col-md-2">
             <button className="usButtons" id="teamButton" onClick={handleClick}>
-              Team
+              Staff
             </button>
           </div>
           <div className="usBtnContainer col-md-2">
@@ -140,14 +158,14 @@ function Us({ req }) {
               id="ownersButton"
               onClick={handleClick}
             >
-              Owner
+              Owners
             </button>
           </div>
         </div>
       </div>
       <div className="container-fluid" id="bubbleContainer">
-        <p className="text-center mt-4" style={{ color: "grey" }}>
-          Click on a stylist to see their services and prices!
+        <p className="text-center mt-4" id="labelText" style={{ color: "grey" }}>
+            Click on a Stylist to see their services and prices!
         </p>
         <ul className="flex-container active" id="stylistsList">
           {createPeopleBubbles(stylistsList, stylistsPath)}

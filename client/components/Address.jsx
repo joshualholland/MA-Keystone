@@ -10,8 +10,8 @@ export default function Address() {
         ></img>
         <div className="infoContainer">
           <h5 className="footerHeaders">ADDRESS</h5>
-          <p className="footerInfo">7350 Cahaba Valley Rd,</p>
-          <p className="footerInfo"> Birmingham</p>
+          <p className="address">7350 Cahaba Valley Rd,</p>
+          <p className="address"> Birmingham</p>
         </div>
       </a>
     </>

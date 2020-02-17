@@ -51,3 +51,27 @@ textarea.form-control{
     margin-top:0;
   }
 }
+
+.consultation-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+
+  .contact-info-buttons {
+    background-color: #3b3b3b;
+    color: white;
+    border-radius: 1px;
+    line-height: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-family: Dosis, arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    width: 40%;
+    height: 42px;
+    margin-bottom: 50px;
+  }
+}
+
+

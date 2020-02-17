@@ -9,6 +9,8 @@ import Email from "../client/components/Email";
 import Footer from "../client/components/Footer";
 import GoogleJSMap from "../client/components/GoogleJSMap";
 import ConfirmMessage from "../client/components/ConfirmMessage";
+import ContactModal from "../client/components/ContactModal";
+import CancellationModal from "../client/components/CancellationModal";
 
 import "../client/scss/app.scss";
 import "../client/scss/custom/layout/fadeIn.scss"; // This CSS conflicts with bootstrap so it's separated here.
@@ -56,6 +58,7 @@ export default class Contact extends Component {
           sectionName="contact"
           content="CONTACT"
         />
+        
         <ConfirmMessage />
         <div className="container slimContainer">
           <h3 className="mt-5">
@@ -72,7 +75,7 @@ export default class Contact extends Component {
               <Email />
             </div>
           </div>
-          <form onSubmit={this.handleSubmit.bind(this)} className="my-5">
+          <form onSubmit={this.handleSubmit.bind(this)} className="mb-5">
             <div className="row form-group">
               <div className="col-12 col-lg-6">
                 <input
@@ -121,9 +124,21 @@ export default class Contact extends Component {
               </div>
             </div>
           </form>
+          <div class="consultation-container">
+            <button type="button" class="contact-info-buttons" data-toggle="modal" data-target="#contactModal">Consultations</button>
+            <button type="button" class="contact-info-buttons" data-toggle="modal" data-target="#cancellationModal">Cancellation Policy</button>
+          </div>
         </div>
         <GoogleJSMap />
         <Footer />
+        <ContactModal 
+            title={"Consultations"}
+            text={"We offer a free consultation for any service we perform. This is a time where you can come in and discuss with your stylist what you have dreamed of for your hair and can be scheduled directly before your appointment time or in advance. Our treat!"}
+          />
+        <CancellationModal 
+          title={"Cancellation Policy"}
+          text={"We may require a credit card to reserve appointments. In order to avoid a service charge, and ensure your appointments for other clients, please reschedule or cancel appointments before the 24 hour period before your appointment time. 1st occurrence of no show or cancellation less than 24 hours: obtain credit card to rebook. 2nd occurrence of no show or cancellations less than 24 hours: credit card on file will be charged 50% of booked services."}
+        />
       </>
     );
   }

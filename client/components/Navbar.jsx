@@ -102,7 +102,7 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a className="navi-link animated heightAnimate" href="/services">
+              <a className="navi-link animated heightAnimate" href="/brands">
                 BRANDS
               </a>
             </li>

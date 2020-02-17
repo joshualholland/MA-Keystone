@@ -21,11 +21,27 @@ const services = () => {
       <Navbar />
       <Banner
         bannerImage={"/images/services/products.jpg"}
-        sectionName={"services"}
-        content={"SERVICES"}
+        sectionName={"brands"}
+        content={"BRANDS"}
       />
       <section id="brands">
+        <div class="product-header">
+          <h3>PRODUCTS</h3>
+          <p>We know it’s important to give you the best! Partnering with brands who are like-minded in
+            culture &amp; education is essential to us. We believe these brands to be exceptional in their focus
+            on product performance- while doing good for the community and the environment.</p>
+        </div>
+        <div class="product-logos">
+          <div class="davine-logo">
+            <img src="/images/services/davines-logo-black.svg"/>
+            <a class="learn-more" target="_blank" href="https://us.davines.com/">Learn More</a>
+          </div>
 
+          <div class="davine-logo">
+            <img src="/images/services/kevin-murphy.jpg" />
+            <a class="learn-more" target="_blank" href="https://kevinmurphy.com.au/">Learn More</a>
+          </div>
+        </div>
       </section>
       <Footer />
     </>
@@ -49,4 +65,4 @@ const services = () => {
       </section> */}
 
 
-export default Services;
+export default services;
