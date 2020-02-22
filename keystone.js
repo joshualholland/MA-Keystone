@@ -22,7 +22,7 @@ keystone.init({
   'static':['public'],
   'auto update': true,
   // The url for your MongoDB connection
-  // 'mongo': url,
+  'mongo': url,
   // Whether to enable built-in authentication for Keystone's Admin UI,
   'auth': true,
   // Cloudinary Config

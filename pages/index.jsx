@@ -78,7 +78,7 @@ export default class Home extends Component {
         </div>
         <section className="row overflow-hidden no-gutters " id="firstSection">
           <div className="col-12 col-xl-6">
-            <img className="w-100" src="/images/landing/motivation.jpg"></img>
+            <img className="w-100" src="/images/landing/purpose.jpg"></img>
           </div>
           <div className="col-12 col-xl-6 contentContainer text-center">
             <div className="row text-center mt-xl-5 pt-xl-5">
@@ -102,9 +102,8 @@ export default class Home extends Component {
           </div>
           <div className="col-12 col-xl-6">
             <img
-              // id="tallPhoto"
               className="w-100 order-0"
-              src="/images/landing/MorganAshley_Fall19Shoot1-0079.jpg"
+              src="/images/landing/motivation.jpg"
             ></img>
           </div>
         </section>
@@ -117,7 +116,7 @@ export default class Home extends Component {
               <h3 className="headerContent col-12 mt-xl-3">ALWAYS LEARNING</h3>
             </div>
             <p className="descContent">
-              From coloring to cut &amp; styling, our stylists are up to date with the latest trends & techniques in the industry.  Our aim is to create a look that is uniquely yours and to provide you with the tools to recreate your new style at home.
+              From coloring to cut &amp; styling, our stylists are up to date with the latest trends &amp; techniques in the industry.  Our aim is to create a look that is uniquely yours and to provide you with the tools to recreate your new style at home.
             </p>
           </div>
         </section>
