@@ -77,7 +77,7 @@ export default class Home extends Component {
           </div>
         </div>
         <section className="row overflow-hidden no-gutters " id="firstSection">
-          <div className="col-12 col-xl-6">
+          <div className="col-12 col-xl-6 image-contain">
             <img className="w-100" src="/images/landing/purpose.jpg"></img>
           </div>
           <div className="col-12 col-xl-6 contentContainer text-center">
@@ -100,7 +100,7 @@ export default class Home extends Component {
               We commit to providing hospitality to each and every one of you who walk through our doors.  Ensuring the highest level of client care and creating an unforgettable experience is at the heart of why we do what we do!
             </p>
           </div>
-          <div className="col-12 col-xl-6">
+          <div className="col-12 col-xl-6 image-contain">
             <img
               className="w-100 order-0"
               src="/images/landing/motivation.jpg"
@@ -108,7 +108,7 @@ export default class Home extends Component {
           </div>
         </section>
         <section className="row overflow-hidden no-gutters ">
-          <div className="col-12 col-xl-6">
+          <div className="col-12 col-xl-6 image-contain">
             <img className="w-100" src="/images/landing/community.jpg"></img>
           </div>
           <div className="col-12 col-xl-6 contentContainer text-center">

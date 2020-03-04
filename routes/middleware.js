@@ -29,7 +29,7 @@ const mailgunCareers = async (req, res, next) => {
   const reason = req.body.reason;
   const selectedFile = req.body.selectedFile;
   const crayon = req.body.crayon;
-  const to = "joshualholland@gmail.com"; // Change to MA Amanda's email
+  const to = "amanda@morganashleysalon.com"; // Change to MA Amanda's email
   const from = email;
   const subject = "Application from: " + name;
   const text =
@@ -72,7 +72,7 @@ const mailgunContact = async (req, res, next) => {
   const email = req.body.email;
   const message = req.body.message;
 
-  const to = "joshualholland@gmail.com"; // Change to MA Amanda's email
+  const to = "amanda@morganashleysalon.com"; // Change to MA Amanda's email
   const from = email;
   const subject = "Inquiry from: " + name;
   const text =

@@ -134,18 +134,6 @@ $viewPortLogoTopOffset: 45vh;
   @include widen(65vw, 40vw, 55vh);
 }
 
-.craftIcons {
-  object-fit: contain;
-  margin-top: 1.5rem;
-  height: 2.5rem;
-  // @include media-breakpoint-up(xl) {
-  //   margin-top: 10%;
-  // }
-  // @media (min-width: 1400px) {
-  //   height:3.5rem;
-  //   margin-top: 18%;
-  // }
-}
 #tallPhoto {
   max-height: 800px;
   @include media-breakpoint-up(xl) {
@@ -168,13 +156,6 @@ $viewPortLogoTopOffset: 45vh;
   @include media-breakpoint-up(lg) {
     margin-bottom: 1rem;
   }
-
-  // @include media-breakpoint-up(xl) {
-  //   padding-top: 5%;
-  // }
-  // @media (min-width: 1400px) {
-  //   padding-top: 15%;
-  // }
 }
 
 .descContent {
@@ -211,6 +192,10 @@ $viewPortLogoTopOffset: 45vh;
 .row.limit [class*="col-"] {
   max-height: 30rem;
   overflow: hidden;
+}
+
+.image-contain {
+  height: 600px;
 }
 
 .followContainer {
