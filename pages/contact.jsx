@@ -14,6 +14,7 @@ import CancellationModal from "../client/components/CancellationModal";
 
 import "../client/scss/app.scss";
 import "../client/scss/custom/layout/fadeIn.scss"; // This CSS conflicts with bootstrap so it's separated here.
+import CovidAlert from "../client/components/CovidAlert";
 
 export default class Contact extends Component {
   constructor(props) {
@@ -52,6 +53,7 @@ export default class Contact extends Component {
         <Head>
           <title>Morgan Ashley Salon | Contact</title>
         </Head>
+        <CovidAlert />
         <Navbar />
         <Banner
           bannerImage={"/images/contact/banner.jpg"}
