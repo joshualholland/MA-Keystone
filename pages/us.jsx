@@ -11,7 +11,6 @@ import Footer from "../client/components/Footer";
 
 import "../client/scss/app.scss";
 import "../client/scss/custom/layout/fadeIn.scss"; // This CSS conflicts with bootstrap so it's separated here.
-import CovidAlert from "../client/components/CovidAlert";
 
 // MONTH DAY YEAR 
 
@@ -131,7 +130,6 @@ function Us({ req }) {
       <Head>
         <title>Morgan Ashley Salon | US</title>
       </Head>
-      <CovidAlert />
       <Navbar />
       <Banner
         bannerImage={"/images/us/us-banner.jpg"}

@@ -11,7 +11,6 @@ import ConfirmMessage from "../client/components/ConfirmMessage";
 
 import "../client/scss/app.scss";
 import "../client/scss/custom/layout/fadeIn.scss"; // This CSS conflicts with bootstrap so it's separated here.
-import CovidAlert from "../client/components/CovidAlert";
 
 export default class Careers extends Component {
   constructor(props) {
@@ -73,7 +72,6 @@ export default class Careers extends Component {
         <Head>
           <title>Morgan Ashley Salon | Careers</title>
         </Head>
-        <CovidAlert />
         <Navbar />
         <Banner
           bannerImage="/images/careers/banner.jpg"

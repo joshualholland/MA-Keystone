@@ -8,7 +8,6 @@ import Footer from "../client/components/Footer";
 
 import "../client/scss/app.scss";
 import "../client/scss/custom/layout/fadeIn.scss"; // This CSS conflicts with bootstrap so it's separated here.
-import CovidAlert from "../client/components/CovidAlert";
 
 /* PRODUCTION */
 let url = "https://morgan-ashley-salon.herokuapp.com"
@@ -19,7 +18,6 @@ const services = () => {
       <Head>
         <title>Morgan Ashley Salon | Brands</title>
       </Head>
-      <CovidAlert />
       <Navbar />
       <Banner
         bannerImage={"/images/services/products.jpg"}
